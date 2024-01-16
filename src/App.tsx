@@ -13,13 +13,15 @@ import "./App.css";
 import { User } from "./model/User";
 import config from "./aws-exports";
 import { errorLogFormatter, infoLogFormatter } from "./utils/logFormatter";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "./app/features/authSlice";
+import { RootState } from "./app/store";
 
 Amplify.configure(config);
 
 function App() {
   const dispatch = useDispatch();
+  const user = useSelector((state: RootState) => state.authSlice);
 
   useEffect(() => {
     Hub.listen("auth", (data) => {
@@ -53,6 +55,14 @@ function App() {
 
     checkUserAuthentication();
   }, [dispatch]);
+
+  // function renderBasedOnAuth() {
+  //   if (user.userId && user.email) {
+  //     return <Dashboard user={user} />;
+  //   }
+
+  //   return <Authentication />;
+  // }
 
   return (
     <div className="App">
