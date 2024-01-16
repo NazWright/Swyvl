@@ -1,0 +1,114 @@
+{
+  "updated_datetime": "2022-05-01T00:00:00Z",
+  "inflow_streams": [
+    {
+      "account_id": "lPNjeW1nR6CDn5okmGQ6hEpMo4lLNoSrzqDje",
+      "stream_id": "no86Eox18VHMvaOVL7gPUM9ap3aR1LsAVZ5nc",
+      "category": ["Transfer", "Payroll"],
+      "category_id": "21009000",
+      "description": "Platypus Payroll",
+      "merchant_name": null,
+      "personal_finance_category": {
+        "primary": "INCOME",
+        "detailed": "INCOME_WAGES",
+        "confidence_level": "UNKNOWN"
+      },
+      "first_date": "2022-02-28",
+      "last_date": "2022-04-30",
+      "frequency": "SEMI_MONTHLY",
+      "transaction_ids": [
+        "nkeaNrDGrhdo6c4qZWDA8ekuIPuJ4Avg5nKfw",
+        "EfC5ekksdy30KuNzad2tQupW8WIPwvjXGbGHL",
+        "ozfvj3FFgp6frbXKJGitsDzck5eWQH7zOJBYd",
+        "QvdDE8AqVWo3bkBZ7WvCd7LskxVix8Q74iMoK",
+        "uQozFPfMzibBouS9h9tz4CsyvFll17jKLdPAF"
+      ],
+      "average_amount": {
+        "amount": -800,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      },
+      "last_amount": {
+        "amount": -1000,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      },
+      "is_active": true,
+      "status": "MATURE",
+      "is_user_modified": true,
+      "last_user_modified_datetime": "2023-01-19T10:34:50Z"
+    }
+  ],
+  "outflow_streams": [
+    {
+      "account_id": "lPNjeW1nR6CDn5okmGQ6hEpMo4lLNoSrzqDff",
+      "stream_id": "no86Eox18VHMvaOVL7gPUM9ap3aR1LsAVZ5nd",
+      "category": ["Service", "Utilities", "Electric"],
+      "category_id": "18068005",
+      "description": "ConEd Bill Payment",
+      "merchant_name": "ConEd",
+      "personal_finance_category": {
+        "primary": "RENT_AND_UTILITIES",
+        "detailed": "RENT_AND_UTILITIES_GAS_AND_ELECTRICITY",
+        "confidence_level": "UNKNOWN"
+      },
+      "first_date": "2022-02-04",
+      "last_date": "2022-05-02",
+      "frequency": "MONTHLY",
+      "transaction_ids": [
+        "yhnUVvtcGGcCKU0bcz8PDQr5ZUxUXebUvbKC0",
+        "HPDnUVgI5Pa0YQSl0rxwYRwVXeLyJXTWDAvpR",
+        "jEPoSfF8xzMClE9Ohj1he91QnvYoSdwg7IT8L",
+        "CmdQTNgems8BT1B7ibkoUXVPyAeehT3Tmzk0l"
+      ],
+      "average_amount": {
+        "amount": 85,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      },
+      "last_amount": {
+        "amount": 100,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      },
+      "is_active": true,
+      "status": "MATURE",
+      "is_user_modified": false
+    },
+    {
+      "account_id": "lPNjeW1nR6CDn5okmGQ6hEpMo4lLNoSrzqDff",
+      "stream_id": "SrBNJZDuUMweodmPmSOeOImwsWt53ZXfJQAfC",
+      "category": ["Shops", "Warehouses and Wholesale Stores"],
+      "category_id": "19051000",
+      "description": "Costco Annual Membership",
+      "merchant_name": "Costco",
+      "personal_finance_category": {
+        "primary": "GENERAL_MERCHANDISE",
+        "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+        "confidence_level": "UNKNOWN"
+      },
+      "first_date": "2022-01-23",
+      "last_date": "2023-01-22",
+      "frequency": "ANNUALLY",
+      "transaction_ids": [
+        "yqEBJ72cS4jFwcpxJcDuQr94oAQ1R1lMC33D4",
+        "Kz5Hm3cZCgpn4tMEKUGAGD6kAcxMBsEZDSwJJ"
+      ],
+      "average_amount": {
+        "amount": 120,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      },
+      "last_amount": {
+        "amount": 120,
+        "iso_currency_code": "USD",
+        "unofficial_currency_code": null
+      },
+      "is_active": true,
+      "status": "MATURE",
+      "is_user_modified": true,
+      "last_user_modified_datetime": "2023-01-19T10:34:50Z"
+    }
+  ],
+  "request_id": "tbFyCEqkU775ZGG"
+}
