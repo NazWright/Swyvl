@@ -1,0 +1,43 @@
+{
+  "main": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-financialapplication-main-53527-authRole",
+      "UnauthRoleArn": "arn:aws:iam::141951247906:role/amplify-financialapplication-main-53527-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::141951247906:role/amplify-financialapplication-main-53527-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-financialapplication-main-53527-deployment",
+      "UnauthRoleName": "amplify-financialapplication-main-53527-unauthRole",
+      "StackName": "amplify-financialapplication-main-53527",
+      "StackId": "arn:aws:cloudformation:us-east-1:141951247906:stack/amplify-financialapplication-main-53527/f7984f20-761c-11ee-af68-129fe7869fc9",
+      "AmplifyAppId": "d3k1mcd5nd8wjp"
+    },
+    "categories": {
+      "function": {
+        "createPlaidAuthToken": {
+          "plaidClientId": "65932bc3312862001cd79cd9",
+          "plaidClientSecretDev": "d923b348398c77de63f02c226e5f88",
+          "plaidClientSecretSandbox": "bde2fcf223a8e6f1340c639df05c66",
+          "deploymentBucketName": "amplify-financialapplication-main-53527-deployment",
+          "s3Key": "amplify-builds/createPlaidAuthToken-4267374437576a726d31-build.zip"
+        },
+        "fetchPlaidAccessToken": {
+          "plaidClientId": "65932bc3312862001cd79cd9",
+          "plaidClientSecretDev": "d923b348398c77de63f02c226e5f88",
+          "plaidClientSecretSandbox": "bde2fcf223a8e6f1340c639df05c66",
+          "deploymentBucketName": "amplify-financialapplication-main-53527-deployment",
+          "s3Key": "amplify-builds/fetchPlaidAccessToken-622b6473624f45755744-build.zip"
+        },
+        "fetchPlaidAccountInformation": {
+          "plaidClientId": "65932bc3312862001cd79cd9",
+          "plaidClientSecretDev": "d923b348398c77de63f02c226e5f88",
+          "plaidClientSecretSandbox": "bde2fcf223a8e6f1340c639df05c66",
+          "deploymentBucketName": "amplify-financialapplication-main-53527-deployment",
+          "s3Key": "amplify-builds/fetchPlaidAccountInformation-44785649375931576447-build.zip"
+        }
+      },
+      "auth": {
+        "financialappe284dc6a": {}
+      }
+    }
+  }
+}

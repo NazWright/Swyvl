@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "paths": {
+    "/plaid": {
+      "name": "/plaid",
+      "lambdaFunction": "createPlaidAuthToken",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/plaid/access-token": {
+      "name": "/plaid/access-token",
+      "lambdaFunction": "fetchPlaidAccessToken",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/accounts": {
+      "name": "/accounts",
+      "lambdaFunction": "fetchPlaidAccountInformation",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

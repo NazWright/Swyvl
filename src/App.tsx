@@ -1,10 +1,20 @@
 import React, { useEffect } from "react";
 import logo from "./logo.svg";
-import Auth from "aws-amplify/auth";
+import {
+  getCurrentUser,
+  AuthUser,
+  fetchUserAttributes,
+} from "aws-amplify/auth";
+import { Amplify } from "aws-amplify";
 import AuthAPI from "aws-amplify/api";
 import { Hub } from "aws-amplify/utils";
 import { constants } from "./constants/applicationConstants";
 import "./App.css";
+import { User } from "./model/User";
+import config from "./aws-exports";
+import { infoLogFormatter } from "./utils/logFormatter";
+
+Amplify.configure(config);
 
 function App() {
   useEffect(() => {
@@ -18,7 +28,24 @@ function App() {
           break;
       }
     });
+
+    checkUserAuthentication();
   }, []);
+
+  async function checkUserAuthentication() {
+    try {
+      const amazonCognitoUserMetaResponse =
+        (await getCurrentUser()) as AuthUser;
+      const { userId } = amazonCognitoUserMetaResponse;
+      let userAttributes;
+      if (userId) {
+        userAttributes = (await fetchUserAttributes()) as User;
+        infoLogFormatter("User has been successfully authenticated...");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   return (
     <div className="App">
