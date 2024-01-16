@@ -12,11 +12,15 @@ import { constants } from "./constants/applicationConstants";
 import "./App.css";
 import { User } from "./model/User";
 import config from "./aws-exports";
-import { infoLogFormatter } from "./utils/logFormatter";
+import { errorLogFormatter, infoLogFormatter } from "./utils/logFormatter";
+import { useDispatch } from "react-redux";
+import { setUser } from "./app/features/authSlice";
 
 Amplify.configure(config);
 
 function App() {
+  const dispatch = useDispatch();
+
   useEffect(() => {
     Hub.listen("auth", (data) => {
       switch (data.payload.event) {
@@ -29,23 +33,26 @@ function App() {
       }
     });
 
-    checkUserAuthentication();
-  }, []);
-
-  async function checkUserAuthentication() {
-    try {
-      const amazonCognitoUserMetaResponse =
-        (await getCurrentUser()) as AuthUser;
-      const { userId } = amazonCognitoUserMetaResponse;
-      let userAttributes;
-      if (userId) {
-        userAttributes = (await fetchUserAttributes()) as User;
-        infoLogFormatter("User has been successfully authenticated...");
+    async function checkUserAuthentication() {
+      try {
+        const amazonCognitoUserMetaResponse =
+          (await getCurrentUser()) as AuthUser;
+        const { userId } = amazonCognitoUserMetaResponse;
+        let userAttributes;
+        if (userId) {
+          userAttributes = await fetchUserAttributes();
+          const user = { ...userAttributes, userId } as User;
+          dispatch(setUser(user));
+          infoLogFormatter("User has been successfully authenticated...");
+        }
+      } catch (error) {
+        console.error(error);
+        // User has failed authentication.
       }
-    } catch (error) {
-      console.error(error);
     }
-  }
+
+    checkUserAuthentication();
+  }, [dispatch]);
 
   return (
     <div className="App">

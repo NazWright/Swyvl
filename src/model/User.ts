@@ -1,4 +1,5 @@
 export type User = {
+  userId: string;
   email: string;
   email_verified?: string;
   family_name: string;
