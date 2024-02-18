@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./Dashboard.css";
 import DashboardContent from "./DashboardContent";
-import { default as accountsGetResponseJson } from "../data/accountsGetResponse.json";
-import { default as transactionSyncJson } from "../data/transactionsGetResponse.json";
-import { RootState } from "../app/store";
+import { default as accountsGetResponseJson } from "../../data/accountsGetResponse.json";
+import { default as transactionSyncJson } from "../../data/transactionsGetResponse.json";
+import { RootState } from "../../app/store";
 
 interface DashboardProps {
   accessToken?: string;
