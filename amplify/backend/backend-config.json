@@ -1,1 +1,131 @@
-{}
+{
+  "auth": {
+    "uwalleta32bb98a": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "uwalleta32bb98aCustomMessage",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "uwalleta32bb98aPostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "FAMILY_NAME",
+          "GIVEN_NAME",
+          "PHONE_NUMBER",
+          "PICTURE"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "uwalleta32bb98aCustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "uwalleta32bb98aPostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_uwalleta32bb98aCustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwalleta32bb98aCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwalleta32bb98aCustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwalleta32bb98aCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwalleta32bb98aCustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwalleta32bb98aCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwalleta32bb98aCustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwalleta32bb98aCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwalleta32bb98aCustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwalleta32bb98aCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwalleta32bb98aPostConfirmation_GROUP": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwalleta32bb98aPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwalleta32bb98aPostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwalleta32bb98aPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwalleta32bb98aPostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwalleta32bb98aPostConfirmation"
+        }
+      ]
+    }
+  }
+}

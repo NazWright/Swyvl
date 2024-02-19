@@ -9,7 +9,27 @@
       "UnauthRoleName": "amplify-uwallet-dev-112616-unauthRole",
       "StackName": "amplify-uwallet-dev-112616",
       "StackId": "arn:aws:cloudformation:us-east-1:141951247906:stack/amplify-uwallet-dev-112616/9ba98280-cf43-11ee-ab84-12ea0b91efd7",
-      "AmplifyAppId": "dqis14her9iwd"
+      "AmplifyAppId": "dqis14her9iwd",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-uwallet-dev-112616-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "uwalleta32bb98a": {}
+      },
+      "function": {
+        "uwalleta32bb98aCustomMessage": {
+          "REDIRECTURL": "http://localhost:3000/onboarding-page",
+          "EMAILSUBJECT": "UWallet Account Confirmation",
+          "EMAILMESSAGE": "Thanks for sigining up for UWallet! Use the link below to get started with onboarding :) ",
+          "deploymentBucketName": "amplify-uwallet-dev-112616-deployment",
+          "s3Key": "amplify-builds/uwalleta32bb98aCustomMessage-2f49756c35714b6e6b65-build.zip"
+        },
+        "uwalleta32bb98aPostConfirmation": {
+          "GROUP": "uwallet-authenticated-users",
+          "deploymentBucketName": "amplify-uwallet-dev-112616-deployment",
+          "s3Key": "amplify-builds/uwalleta32bb98aPostConfirmation-2f585273505455496739-build.zip"
+        }
+      }
     }
   }
 }
