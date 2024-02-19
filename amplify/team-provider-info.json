@@ -1,0 +1,15 @@
+{
+  "main": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-uwallet-main-01423-authRole",
+      "UnauthRoleArn": "arn:aws:iam::141951247906:role/amplify-uwallet-main-01423-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::141951247906:role/amplify-uwallet-main-01423-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-uwallet-main-01423-deployment",
+      "UnauthRoleName": "amplify-uwallet-main-01423-unauthRole",
+      "StackName": "amplify-uwallet-main-01423",
+      "StackId": "arn:aws:cloudformation:us-east-1:141951247906:stack/amplify-uwallet-main-01423/d5f3e080-cebb-11ee-88ab-0e75229d7295",
+      "AmplifyAppId": "d2u1twfm0hikb6"
+    }
+  }
+}
