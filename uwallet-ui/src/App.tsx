@@ -51,6 +51,7 @@ function App() {
           infoLogFormatter("User has been successfully authenticated...");
         }
       } catch (error) {
+        console.error("User is not authenticated...Please sign in");
         console.error(error);
         // User has failed authentication.
       }
