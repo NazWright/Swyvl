@@ -1,0 +1,261 @@
+.screen-14 {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.screen-14 .LOG-IN-10 {
+  background-color: #f2f2f2;
+  height: 926px;
+  position: relative;
+  width: 428px;
+}
+
+.screen-14 .authentication-form {
+  background-color: #ffffff;
+  border-radius: 33px;
+  box-shadow: 0px 5px 15px #30333e29;
+  height: 365px;
+  left: 57px;
+  position: absolute;
+  top: 324px;
+  width: 315px;
+}
+
+.screen-14 .overlap-89 {
+  background-color: #ffffff;
+  color: #0099ff;
+  border: 1px solid;
+  border-color: #d8d8d8;
+  border-radius: 15px;
+  height: 30px;
+  left: 34px;
+  position: absolute;
+  top: 43px;
+  width: 247px;
+}
+.error-message {
+  font-size: 0.75rem;
+  margin: 1rem;
+  position: relative;
+  color: red;
+}
+
+.screen-14 .overlap-89.active {
+  background-color: #0099ff;
+  color: #ffffff;
+}
+
+.screen-14 .overlap-90.active {
+  background-color: #0099ff;
+  color: #ffffff;
+}
+
+.screen-14 .overlap-90 {
+  background-color: #ffffff;
+  color: #0099ff;
+  border-radius: 15px;
+  height: 30px;
+  left: 113px;
+  position: absolute;
+  top: 0;
+  width: 134px;
+}
+
+.screen-14 .text-wrapper-179 {
+  font-family: "Roboto", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 45px;
+  letter-spacing: 0.14px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  white-space: nowrap;
+}
+
+.screen-14 .text-wrapper-180 {
+  font-family: "Roboto", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 46px;
+  letter-spacing: 0.14px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  white-space: nowrap;
+}
+
+.screen-14 .overlap-91 {
+  height: 15px;
+  left: 45px;
+  position: absolute;
+  top: 126px;
+  width: 221px;
+}
+
+.screen-14 .line-32 {
+  height: 1px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 14px;
+  width: 221px;
+}
+
+.screen-14 .text-wrapper-181 {
+  color: #d3d3d3;
+  font-family: "Roboto", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  left: 1px;
+  letter-spacing: 0.1px;
+  line-height: 10px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+}
+
+.screen-14 .overlap-92 {
+  height: 15px;
+  left: 45px;
+  position: absolute;
+  top: 174px;
+  width: 221px;
+}
+
+.screen-14 .authentication-form-control {
+  color: #d3d3d3;
+  font-family: "Roboto", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0.1px;
+  line-height: 10px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  border: none;
+  outline: none;
+}
+
+.authentication-form.sign-up {
+  height: 58%;
+}
+
+.authentication-form.sign-up form {
+  top: 60px !important;
+  position: relative;
+  height: 62%;
+}
+
+.authentication-form.sign-up.verification form {
+  top: unset !important;
+}
+
+.authentication-form.sign-up form.error {
+  top: 30px !important;
+}
+
+.authentication-form.sign-up.error {
+  height: 60%;
+}
+
+.authentication-form.sign-up.verification {
+  height: 33%;
+}
+.authentication-form.sign-up .uwallet-input {
+  height: 1.5rem;
+}
+
+.authentication-form.sign-up .uwallet-input-group {
+  height: 2.5rem;
+}
+.error-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  color: red;
+}
+
+.verification-email {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.error-icon {
+  color: red;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.uwallet-input {
+  border: none;
+  outline: none;
+  flex: 2;
+  background: transparent;
+}
+
+.form-control.error {
+  border: 1px solid red !important;
+}
+
+.uwallet-input-group {
+  display: flex;
+}
+
+.screen-14 .authentication-button {
+  background-image: url(../../static/img/path-17-1.png);
+  background-position: 50% 50%;
+  background-color: transparent;
+  background-size: cover;
+  height: 46px;
+  left: 70px;
+  position: absolute;
+  top: 275px;
+  width: 175px;
+  border: none;
+}
+
+.screen-14 .authentication-button.sign-up {
+  position: unset;
+}
+
+.screen-14 .text-wrapper-183 {
+  color: #ffffff;
+  font-family: "Roboto", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 68px;
+  letter-spacing: 0.14px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+}
+
+.screen-14 .overlap-93 {
+  height: 15px;
+  left: 46px;
+  position: absolute;
+  top: 225px;
+  width: 221px;
+}
+
+.screen-14 .untitled-design-46 {
+  height: 407px;
+  left: 11px;
+  object-fit: cover;
+  position: absolute;
+  top: -88px;
+  width: 407px;
+}

@@ -17,6 +17,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "./app/features/authSlice";
 import { RootState } from "./app/store";
 import Dashboard from "./components/dashboard/Dashboard";
+import AuthenticationSelector from "./components/authentication/AuthenticationSelector";
 
 Amplify.configure(config);
 
@@ -65,7 +66,7 @@ function App() {
       return <Dashboard accessToken="" />;
     }
 
-    return <div>No User</div>;
+    return <AuthenticationSelector />;
   }
 
   return <div className="App">{renderBasedOnAuth()}</div>;
