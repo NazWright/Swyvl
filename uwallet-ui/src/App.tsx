@@ -16,12 +16,15 @@ import { errorLogFormatter, infoLogFormatter } from "./utils/logFormatter";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "./app/features/authSlice";
 import { RootState } from "./app/store";
+import Dashboard from "./components/dashboard/Dashboard";
 
 Amplify.configure(config);
 
 function App() {
   const dispatch = useDispatch();
   const user = useSelector((state: RootState) => state.authSlice);
+
+  console.log(user);
 
   useEffect(() => {
     Hub.listen("auth", (data) => {
@@ -56,15 +59,15 @@ function App() {
     checkUserAuthentication();
   }, [dispatch]);
 
-  // function renderBasedOnAuth() {
-  //   if (user.userId && user.email) {
-  //     return <Dashboard user={user} />;
-  //   }
+  function renderBasedOnAuth() {
+    if (user.userId && user.email) {
+      return <Dashboard accessToken="" />;
+    }
 
-  //   return <Authentication />;
-  // }
+    return <div>No User</div>;
+  }
 
-  return <div className="App"></div>;
+  return <div className="App">{renderBasedOnAuth()}</div>;
 }
 
 export default App;

@@ -10,6 +10,21 @@
       "StackName": "amplify-uwallet-main-01423",
       "StackId": "arn:aws:cloudformation:us-east-1:141951247906:stack/amplify-uwallet-main-01423/d5f3e080-cebb-11ee-88ab-0e75229d7295",
       "AmplifyAppId": "d2u1twfm0hikb6"
+    },
+    "categories": {
+      "auth": {
+        "uwalletbe7fe4d6": {}
+      },
+      "function": {
+        "uwalletbe7fe4d6CustomMessage": {
+          "REDIRECTURL": "http://localhost:3001/dashboard",
+          "EMAILSUBJECT": "UWallet Sign-up Confirmation",
+          "EMAILMESSAGE": "Thanks for signing up for UWallet! Please use the link below to confirm your email address and get started with UWallet!"
+        },
+        "uwalletbe7fe4d6PostConfirmation": {
+          "GROUP": "Uwallet-users"
+        }
+      }
     }
   }
 }
