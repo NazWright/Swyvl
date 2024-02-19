@@ -1,4 +1,131 @@
 {
-  "auth": {},
-  "function": {}
+  "auth": {
+    "uwallet609a1c75": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "uwallet609a1c75CustomMessage",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "uwallet609a1c75PostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "FAMILY_NAME",
+          "GIVEN_NAME",
+          "PHONE_NUMBER",
+          "PICTURE"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "uwallet609a1c75CustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "uwallet609a1c75PostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_uwallet609a1c75CustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwallet609a1c75CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwallet609a1c75CustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwallet609a1c75CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwallet609a1c75CustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwallet609a1c75CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwallet609a1c75CustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwallet609a1c75CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwallet609a1c75CustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwallet609a1c75CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwallet609a1c75PostConfirmation_GROUP": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwallet609a1c75PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwallet609a1c75PostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwallet609a1c75PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_uwallet609a1c75PostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uwallet609a1c75PostConfirmation"
+        }
+      ]
+    }
+  }
 }
