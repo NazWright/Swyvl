@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { SignInProperties, SignInRequest } from "../AuthenticationProperties";
 import { useForm } from "react-hook-form";
 import inputBottomBorderImage from "../../../static/img/line-6.png";
@@ -13,6 +13,8 @@ export default function SignInForm({ setLoading }: SignInFormProperties) {
     formState: { errors },
   } = useForm();
 
+  const [errorMessage, setErrorMessage] = useState("");
+
   const onSubmit = async (data: any) => {
     console.info("Checking user's sign in credentials... ");
     setLoading(true);
@@ -23,10 +25,6 @@ export default function SignInForm({ setLoading }: SignInFormProperties) {
       } as SignInRequest;
       const signInResponse = await signIn(signInRequest);
       console.log(signInResponse);
-      // const authenticatedUserMeta = await signIn(
-      //   data.email,
-      //   data.password
-      // );
       // const user = {
       //   username: authenticatedUserMeta.username,
       //   email: authenticatedUserMeta.attributes.email,
@@ -40,6 +38,10 @@ export default function SignInForm({ setLoading }: SignInFormProperties) {
       // dispatch(setAuthenticated(true));
     } catch (error) {
       console.error(error);
+      setErrorMessage(
+        "There is no user found with provided email and password."
+      );
+      setLoading(false);
     }
   };
 
