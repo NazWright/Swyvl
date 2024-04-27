@@ -15,9 +15,9 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: uwallet-ui/public
+    baseDirectory: swvyl-ui/public
     files:
       - "**/*"
   cache:
     paths:
-      - uwallet-ui/node_modules/**/*
+      - swvyl-ui/node_modules/**/*
