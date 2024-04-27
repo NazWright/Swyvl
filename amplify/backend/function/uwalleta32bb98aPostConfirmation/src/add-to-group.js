@@ -3,7 +3,7 @@ const {
   AdminAddUserToGroupCommand,
   GetGroupCommand,
   CreateGroupCommand,
-} = require('@aws-sdk/client-cognito-identity-provider');
+} = require("@aws-sdk/client-cognito-identity-provider");
 
 const cognitoIdentityServiceProvider = new CognitoIdentityProviderClient({});
 
@@ -26,12 +26,16 @@ exports.handler = async (event) => {
   try {
     await cognitoIdentityServiceProvider.send(new GetGroupCommand(groupParams));
   } catch (e) {
-    await cognitoIdentityServiceProvider.send(new CreateGroupCommand(groupParams));
+    await cognitoIdentityServiceProvider.send(
+      new CreateGroupCommand(groupParams)
+    );
   }
   /**
    * Then, add the user to the group.
    */
-  await cognitoIdentityServiceProvider.send(new AdminAddUserToGroupCommand(addUserParams));
+  await cognitoIdentityServiceProvider.send(
+    new AdminAddUserToGroupCommand(addUserParams)
+  );
 
   return event;
 };
