@@ -1,4 +1,20 @@
 {
+  "api": {
+    "swyvlfinanceapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "swyvlUsers"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "uwalleta32bb98a": {
       "customAuth": false,
@@ -51,6 +67,41 @@
     }
   },
   "function": {
+    "swyvlDatabaseTrigger21bff96b": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "swyvlDatabase"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "swyvlUsers": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "swyvlDatabase"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "uwalleta32bb98aCustomMessage": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -63,27 +114,59 @@
     }
   },
   "parameters": {
-    "AMPLIFY_function_uwalleta32bb98aCustomMessage_EMAILMESSAGE": {
+    "AMPLIFY_function_swyvlDatabaseTrigger21bff96b_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "uwalleta32bb98aCustomMessage"
+          "resourceName": "swyvlDatabaseTrigger21bff96b"
         }
       ]
     },
-    "AMPLIFY_function_uwalleta32bb98aCustomMessage_EMAILSUBJECT": {
+    "AMPLIFY_function_swyvlDatabaseTrigger21bff96b_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "uwalleta32bb98aCustomMessage"
+          "resourceName": "swyvlDatabaseTrigger21bff96b"
         }
       ]
     },
-    "AMPLIFY_function_uwalleta32bb98aCustomMessage_REDIRECTURL": {
+    "AMPLIFY_function_swyvlUsers_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "uwalleta32bb98aCustomMessage"
+          "resourceName": "swyvlUsers"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlUsers_env": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlUsers"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlUsers_region": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlUsers"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlUsers_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlUsers"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlUsers_tableRegion": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlUsers"
         }
       ]
     },
@@ -103,14 +186,6 @@
         }
       ]
     },
-    "AMPLIFY_function_uwalleta32bb98aPostConfirmation_GROUP": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "uwalleta32bb98aPostConfirmation"
-        }
-      ]
-    },
     "AMPLIFY_function_uwalleta32bb98aPostConfirmation_deploymentBucketName": {
       "usedBy": [
         {
@@ -126,6 +201,12 @@
           "resourceName": "uwalleta32bb98aPostConfirmation"
         }
       ]
+    }
+  },
+  "storage": {
+    "swyvlDatabase": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
     }
   }
 }

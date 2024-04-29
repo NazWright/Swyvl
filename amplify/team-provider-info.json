@@ -1,16 +1,16 @@
 {
-  "dev": {
+  "main": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-uwallet-dev-112616-authRole",
-      "UnauthRoleArn": "arn:aws:iam::141951247906:role/amplify-uwallet-dev-112616-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::141951247906:role/amplify-uwallet-dev-112616-authRole",
+      "AuthRoleName": "amplify-uwallet-main-162135-authRole",
+      "UnauthRoleArn": "arn:aws:iam::141951247906:role/amplify-uwallet-main-162135-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::141951247906:role/amplify-uwallet-main-162135-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-uwallet-dev-112616-deployment",
-      "UnauthRoleName": "amplify-uwallet-dev-112616-unauthRole",
-      "StackName": "amplify-uwallet-dev-112616",
-      "StackId": "arn:aws:cloudformation:us-east-1:141951247906:stack/amplify-uwallet-dev-112616/9ba98280-cf43-11ee-ab84-12ea0b91efd7",
-      "AmplifyAppId": "dqis14her9iwd",
-      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-uwallet-dev-112616-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+      "DeploymentBucketName": "amplify-uwallet-main-162135-deployment",
+      "UnauthRoleName": "amplify-uwallet-main-162135-unauthRole",
+      "StackName": "amplify-uwallet-main-162135",
+      "StackId": "arn:aws:cloudformation:us-east-1:141951247906:stack/amplify-uwallet-main-162135/f3a2ada0-cf42-11ee-9c44-1275ee4b5cdf",
+      "AmplifyAppId": "d2p5q07m0n081t",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-uwallet-main-162135-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
@@ -18,17 +18,30 @@
       },
       "function": {
         "uwalleta32bb98aCustomMessage": {
-          "REDIRECTURL": "http://localhost:3000/onboarding-page",
-          "EMAILSUBJECT": "UWallet Account Confirmation",
-          "EMAILMESSAGE": "Thanks for sigining up for UWallet! Use the link below to get started with onboarding :) ",
-          "deploymentBucketName": "amplify-uwallet-dev-112616-deployment",
+          "deploymentBucketName": "amplify-uwallet-main-162135-deployment",
           "s3Key": "amplify-builds/uwalleta32bb98aCustomMessage-2f49756c35714b6e6b65-build.zip"
         },
         "uwalleta32bb98aPostConfirmation": {
-          "GROUP": "uwallet-authenticated-users",
-          "deploymentBucketName": "amplify-uwallet-dev-112616-deployment",
-          "s3Key": "amplify-builds/uwalleta32bb98aPostConfirmation-2f585273505455496739-build.zip"
+          "deploymentBucketName": "amplify-uwallet-main-162135-deployment",
+          "s3Key": "amplify-builds/uwalleta32bb98aPostConfirmation-722b65506d595a416a38-build.zip"
+        },
+        "swyvlUsers": {
+          "deploymentBucketName": "amplify-uwallet-main-162135-deployment",
+          "s3Key": "amplify-builds/swyvlUsers-454d4a5362766e6b4747-build.zip",
+          "region": "us-east-1",
+          "tableRegion": "us-east-1",
+          "env": "main"
+        },
+        "swyvlDatabaseTrigger21bff96b": {
+          "deploymentBucketName": "amplify-uwallet-main-162135-deployment",
+          "s3Key": "amplify-builds/swyvlDatabaseTrigger21bff96b-444856336e52324d6b43-build.zip"
         }
+      },
+      "storage": {
+        "swyvlDatabase": {}
+      },
+      "api": {
+        "swyvlfinanceapi": {}
       }
     }
   }

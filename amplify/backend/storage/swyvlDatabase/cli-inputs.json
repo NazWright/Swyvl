@@ -1,0 +1,16 @@
+{
+  "resourceName": "swyvlDatabase",
+  "tableName": "users",
+  "partitionKey": {
+    "fieldName": "user_id",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "email",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": [
+    "swyvlDatabaseTrigger21bff96b"
+  ]
+}
