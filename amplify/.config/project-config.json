@@ -8,8 +8,8 @@
   "javascript": {
     "framework": "react",
     "config": {
-      "SourceDir": "src",
-      "DistributionDir": "public",
+      "SourceDir": "swvyl-ui/src",
+      "DistributionDir": "swvyl-ui/public",
       "BuildCommand": "npm run-script build",
       "StartCommand": "npm run-script start"
     }

@@ -22,6 +22,8 @@
   position: absolute;
   top: 324px;
   width: 315px;
+  display: flex;
+  flex-direction: column;
 }
 
 .screen-14 .overlap-89 {
@@ -31,10 +33,11 @@
   border-color: #d8d8d8;
   border-radius: 15px;
   height: 30px;
-  left: 34px;
-  position: absolute;
-  top: 43px;
   width: 247px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 2rem;
 }
 .error-message {
   font-size: 0.75rem;

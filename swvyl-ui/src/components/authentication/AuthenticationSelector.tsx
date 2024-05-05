@@ -23,20 +23,24 @@ export default function AuthenticationSelector() {
                 } ${isVerification ? "verification" : ""}`}
               >
                 {/*TODO: Work on button toggling functionality */}
-                <div className={`overlap-89 ${logInToggled ? "active" : ""}`}>
-                  <div className={`overlap-90 ${logInToggled ? "" : "active"}`}>
+                <div>
+                  <div className={`overlap-89 ${logInToggled ? "active" : ""}`}>
                     <div
-                      className={`text-wrapper-179`}
-                      onClick={(event) => setLogInToggled(false)}
+                      className={`overlap-90 ${logInToggled ? "" : "active"}`}
                     >
-                      Sign Up
+                      <div
+                        className={`text-wrapper-179`}
+                        onClick={(event) => setLogInToggled(false)}
+                      >
+                        Sign Up
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="text-wrapper-180"
-                    onClick={(event) => setLogInToggled(true)}
-                  >
-                    Log In
+                    <div
+                      className="text-wrapper-180"
+                      onClick={(event) => setLogInToggled(true)}
+                    >
+                      Log In
+                    </div>
                   </div>
                 </div>
                 {logInToggled && (

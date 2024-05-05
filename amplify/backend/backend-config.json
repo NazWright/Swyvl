@@ -1,10 +1,62 @@
 {
+  "api": {
+    "AdminQueries": {
+      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "swyvlAuthenticationResource"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "AdminQueriesda21f09f"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
-    "swyvlprod93798d8d": {
+    "swyvlAuthenticationResource": {
       "customAuth": false,
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourceCustomMessage",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourcePostAuthentication",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourcePostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
       "frontendAuthConfig": {
-        "mfaConfiguration": "OFF",
+        "mfaConfiguration": "OPTIONAL",
         "mfaTypes": [
           "SMS"
         ],
@@ -16,7 +68,7 @@
           "EMAIL",
           "FAMILY_NAME",
           "GIVEN_NAME",
-          "PHONE_NUMBER"
+          "PICTURE"
         ],
         "socialProviders": [],
         "usernameAttributes": [
@@ -28,6 +80,151 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "swyvlAuthenticationResource"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups"
+    }
+  },
+  "function": {
+    "AdminQueriesda21f09f": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "swyvlAuthenticationResource"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "swyvlAuthenticationResourceCustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "swyvlAuthenticationResourcePostAuthentication": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "swyvlAuthenticationResourcePostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_AdminQueriesda21f09f_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesda21f09f"
+        }
+      ]
+    },
+    "AMPLIFY_function_AdminQueriesda21f09f_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesda21f09f"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlAuthenticationResourceCustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourceCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlAuthenticationResourceCustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourceCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlAuthenticationResourceCustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourceCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlAuthenticationResourceCustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourceCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlAuthenticationResourceCustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourceCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlAuthenticationResourcePostAuthentication_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourcePostAuthentication"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlAuthenticationResourcePostAuthentication_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourcePostAuthentication"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlAuthenticationResourcePostConfirmation_GROUP": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourcePostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlAuthenticationResourcePostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourcePostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_swyvlAuthenticationResourcePostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "swyvlAuthenticationResourcePostConfirmation"
+        }
+      ]
     }
   }
 }

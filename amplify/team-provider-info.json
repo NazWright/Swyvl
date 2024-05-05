@@ -9,12 +9,35 @@
       "UnauthRoleName": "amplify-swyvlprod-prod-7a10c-unauthRole",
       "StackName": "amplify-swyvlprod-prod-7a10c",
       "StackId": "arn:aws:cloudformation:us-east-1:141951247906:stack/amplify-swyvlprod-prod-7a10c/26b8ec40-0b2a-11ef-930e-122654ec0681",
-      "AmplifyAppId": "d9c63ib8gehal"
+      "AmplifyAppId": "d9c63ib8gehal",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-swyvlprod-prod-7a10c-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
+      "function": {
+        "swyvlAuthenticationResourceCustomMessage": {
+          "EMAILMESSAGE": "hi",
+          "EMAILSUBJECT": "Account Confirmation",
+          "REDIRECTURL": "/dashboard",
+          "deploymentBucketName": "amplify-swyvlprod-prod-7a10c-deployment",
+          "s3Key": "amplify-builds/swyvlAuthenticationResourceCustomMessage-5138623141516d575133-build.zip"
+        },
+        "swyvlAuthenticationResourcePostConfirmation": {
+          "GROUP": "Users",
+          "deploymentBucketName": "amplify-swyvlprod-prod-7a10c-deployment",
+          "s3Key": "amplify-builds/swyvlAuthenticationResourcePostConfirmation-79375136566a75617866-build.zip"
+        },
+        "AdminQueriesda21f09f": {
+          "deploymentBucketName": "amplify-swyvlprod-prod-7a10c-deployment",
+          "s3Key": "amplify-builds/AdminQueriesda21f09f-78485a445a6874347346-build.zip"
+        },
+        "swyvlAuthenticationResourcePostAuthentication": {
+          "deploymentBucketName": "amplify-swyvlprod-prod-7a10c-deployment",
+          "s3Key": "amplify-builds/swyvlAuthenticationResourcePostAuthentication-545146434d6730486337-build.zip"
+        }
+      },
       "auth": {
-        "swyvlprod25dd5b4b": {},
-        "swyvlprod93798d8d": {}
+        "swyvlAuthenticationResource": {},
+        "userPoolGroups": {}
       }
     }
   }
