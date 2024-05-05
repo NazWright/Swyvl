@@ -142,7 +142,14 @@
   top: 0;
   white-space: nowrap;
   border: none;
+  border-bottom: 0.5px solid grey;
   outline: none;
+  width: 100%;
+  transition: ease-in-out 0.3s;
+}
+
+.screen-14 .authentication-form-control:focus {
+  border-bottom: 1px solid grey;
 }
 
 .authentication-form.sign-up {

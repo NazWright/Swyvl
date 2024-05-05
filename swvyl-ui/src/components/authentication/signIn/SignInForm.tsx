@@ -50,16 +50,15 @@ export default function SignInForm({ setLoading }: SignInFormProperties) {
       {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="overlap-91">
-            <img className="line-32" alt="Line" src={inputBottomBorderImage} />
             <input
               className="authentication-form-control"
               placeholder="Enter Email Address"
               type="email"
               {...register("email", { required: true })}
             />
+            {errors.email && <span>This field is required</span>}
           </div>
           <div className="overlap-92">
-            <img className="line-32" alt="Line" src={inputBottomBorderImage} />
             <input
               className="authentication-form-control"
               placeholder="Enter Password"
@@ -71,7 +70,7 @@ export default function SignInForm({ setLoading }: SignInFormProperties) {
           </div>
 
           {/* Button to login*/}
-          <button className="authentication-button onboarding">
+          <button type="submit" className="authentication-button onboarding">
             <div className="text-wrapper-183">Log In</div>
           </button>
         </form>
