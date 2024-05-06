@@ -140,7 +140,6 @@
   left: 0;
   letter-spacing: 0.1px;
   line-height: 10px;
-  position: absolute;
   text-align: center;
   top: 0;
   white-space: nowrap;
@@ -156,13 +155,13 @@
 }
 
 .authentication-form.sign-up {
-  height: 58%;
+  height: 50%;
 }
 
 .authentication-form.sign-up form {
-  top: 60px !important;
   position: relative;
-  height: 62%;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .authentication-form.sign-up.verification form {
