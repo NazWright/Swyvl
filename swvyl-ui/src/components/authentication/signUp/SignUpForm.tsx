@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { SignInProperties } from "../AuthenticationProperties";
+import { infoLogFormatter } from "../../../utils/logFormatter";
+import { signUp, SignUpInput } from "aws-amplify/auth";
 
 interface SignUpFormProperties extends SignInProperties {}
 
@@ -11,18 +13,40 @@ export default function SignUpForm({ setLoading }: SignUpFormProperties) {
     formState: { errors },
   } = useForm();
 
-  function onSubmit(data: any) {}
+  async function onSubmit(data: any) {
+    infoLogFormatter(
+      "Attempting to sign up new user with provided credentials..."
+    );
+    try {
+      // TODO: add ability to upload a picture with sign up
+      const signUpResponse = await signUp({
+        username: data.email,
+        password: data.password,
+        options: {
+          userAttributes: {
+            email: data.email,
+            family_name: data.familyName,
+            given_name: data.givenName,
+            picture: "yoooo",
+          },
+        },
+      });
+      infoLogFormatter("User has been successfully created...");
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   //   TODO: Need to add the ability to submit a photo when registering
 
   const formInputs = [
     {
-      name: "firstName",
+      name: "givenName",
       type: "text",
       placeholder: "Enter your first name",
     },
     {
-      name: "lastName",
+      name: "familyName",
       type: "text",
       placeholder: "Enter your last name",
     },
@@ -36,15 +60,10 @@ export default function SignUpForm({ setLoading }: SignUpFormProperties) {
       type: "password",
       placeholder: "Enter your password",
     },
-    {
-      name: "confirm-password",
-      type: "password",
-      placeholder: "Please confirm your password",
-    },
   ];
 
   return (
-    <form className="signup-form">
+    <form className="signup-form" onSubmit={handleSubmit(onSubmit)}>
       {formInputs.map((input) => {
         return (
           <div>
