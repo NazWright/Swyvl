@@ -19,7 +19,7 @@
           "EMAILSUBJECT": "Account Confirmation",
           "REDIRECTURL": "/dashboard",
           "deploymentBucketName": "amplify-swyvlprod-prod-7a10c-deployment",
-          "s3Key": "amplify-builds/swyvlAuthenticationResourceCustomMessage-5138623141516d575133-build.zip"
+          "s3Key": "amplify-builds/swyvlAuthenticationResourceCustomMessage-4a56316672694d697857-build.zip"
         },
         "swyvlAuthenticationResourcePostConfirmation": {
           "GROUP": "Users",
@@ -38,6 +38,9 @@
       "auth": {
         "swyvlAuthenticationResource": {},
         "userPoolGroups": {}
+      },
+      "api": {
+        "AdminQueries": {}
       }
     }
   }

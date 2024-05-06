@@ -47,7 +47,7 @@
     "adminQueries": true,
     "triggers": {
       "CustomMessage": [
-        "verification-link"
+        "custom"
       ],
       "PostAuthentication": [
         "custom"
@@ -107,15 +107,15 @@
         ]
       }
     ],
-    "authProviders": [],
     "parentStack": {
       "Ref": "AWS::StackId"
     },
     "permissions": [
       "{\n  \"policyName\": \"AddToGroupCognito\",\n  \"trigger\": \"PostConfirmation\",\n  \"effect\": \"Allow\",\n  \"actions\": [\n    \"cognito-idp:AdminAddUserToGroup\",\n    \"cognito-idp:GetGroup\",\n    \"cognito-idp:CreateGroup\"\n  ],\n  \"resource\": {\n    \"paramType\": \"!GetAtt\",\n    \"keys\": [\n      \"UserPool\",\n      \"Arn\"\n    ]\n  }\n}"
     ],
-    "thirdPartyAuth": false,
     "verificationBucketName": "swyvlauthenticationresourceverificationbucket",
-    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"CustomMessage\",\n    \"lambdaFunctionName\": \"swyvlAuthenticationResourceCustomMessage\"\n  },\n  {\n    \"triggerType\": \"PostAuthentication\",\n    \"lambdaFunctionName\": \"swyvlAuthenticationResourcePostAuthentication\"\n  },\n  {\n    \"triggerType\": \"PostConfirmation\",\n    \"lambdaFunctionName\": \"swyvlAuthenticationResourcePostConfirmation\"\n  }\n]"
+    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"CustomMessage\",\n    \"lambdaFunctionName\": \"swyvlAuthenticationResourceCustomMessage\"\n  },\n  {\n    \"triggerType\": \"PostAuthentication\",\n    \"lambdaFunctionName\": \"swyvlAuthenticationResourcePostAuthentication\"\n  },\n  {\n    \"triggerType\": \"PostConfirmation\",\n    \"lambdaFunctionName\": \"swyvlAuthenticationResourcePostConfirmation\"\n  }\n]",
+    "authProviders": [],
+    "thirdPartyAuth": false
   }
 }

@@ -31,6 +31,7 @@ export default function SignUpForm({ setLoading }: SignUpFormProperties) {
           },
         },
       });
+
       infoLogFormatter("User has been successfully created...");
     } catch (error) {
       console.error(error);
