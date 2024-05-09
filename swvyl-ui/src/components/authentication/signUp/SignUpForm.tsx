@@ -1,12 +1,16 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { SignInProperties } from "../AuthenticationProperties";
+import { SignUpProperties } from "../AuthenticationProperties";
 import { infoLogFormatter } from "../../../utils/logFormatter";
-import { signUp, SignUpInput } from "aws-amplify/auth";
+import { signUp } from "aws-amplify/auth";
+import { setUser } from "../../../app/features/authSlice";
 
-interface SignUpFormProperties extends SignInProperties {}
+interface SignUpFormProperties extends SignUpProperties {}
 
-export default function SignUpForm({ setLoading }: SignUpFormProperties) {
+export default function SignUpForm({
+  setLoading,
+  verificationHandler,
+}: SignUpFormProperties) {
   const {
     register,
     handleSubmit,
@@ -14,6 +18,7 @@ export default function SignUpForm({ setLoading }: SignUpFormProperties) {
   } = useForm();
 
   async function onSubmit(data: any) {
+    setLoading(true);
     infoLogFormatter(
       "Attempting to sign up new user with provided credentials..."
     );
@@ -33,6 +38,8 @@ export default function SignUpForm({ setLoading }: SignUpFormProperties) {
       });
 
       infoLogFormatter("User has been successfully created...");
+      setLoading(false);
+      verificationHandler(data.email);
     } catch (error) {
       console.error(error);
     }

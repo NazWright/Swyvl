@@ -5,7 +5,7 @@ interface SharedAuthenticationProperties {
 export interface SignInProperties extends SharedAuthenticationProperties {}
 
 export interface SignUpProperties extends SharedAuthenticationProperties {
-  verificationHandler: () => void;
+  verificationHandler: (email: string) => void;
 }
 
 export interface SignInRequest {

@@ -1,4 +1,4 @@
-.screen-14 {
+.swyvl-auth-screen {
   background-color: #f2f2f2;
   display: flex;
   flex-direction: row;
@@ -6,27 +6,27 @@
   width: 100%;
 }
 
-.screen-14 .LOG-IN-10 {
+.swyvl-auth-screen .login-container {
   background-color: #f2f2f2;
   height: 926px;
   position: relative;
-  width: 428px;
+  width: 100%;
 }
 
-.screen-14 .authentication-form {
+.swyvl-auth-screen .authentication-form {
   background-color: #ffffff;
   border-radius: 33px;
   box-shadow: 0px 5px 15px #30333e29;
   height: 365px;
   left: 57px;
-  position: absolute;
   top: 324px;
   width: 315px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.screen-14 .overlap-89 {
+.swyvl-auth-screen .overlap-89 {
   background-color: #ffffff;
   color: #0099ff;
   border: 1px solid;
@@ -46,17 +46,17 @@
   color: red;
 }
 
-.screen-14 .overlap-89.active {
+.swyvl-auth-screen .overlap-89.active {
   background-color: #0099ff;
   color: #ffffff;
 }
 
-.screen-14 .overlap-90.active {
+.swyvl-auth-screen .overlap-90.active {
   background-color: #0099ff;
   color: #ffffff;
 }
 
-.screen-14 .overlap-90 {
+.swyvl-auth-screen .overlap-90 {
   background-color: #ffffff;
   color: #0099ff;
   border-radius: 15px;
@@ -67,7 +67,7 @@
   width: 134px;
 }
 
-.screen-14 .text-wrapper-179 {
+.swyvl-auth-screen .text-wrapper-179 {
   font-family: "Roboto", Helvetica;
   font-size: 14px;
   font-weight: 700;
@@ -80,7 +80,7 @@
   white-space: nowrap;
 }
 
-.screen-14 .text-wrapper-180 {
+.swyvl-auth-screen .text-wrapper-180 {
   font-family: "Roboto", Helvetica;
   font-size: 14px;
   font-weight: 700;
@@ -93,15 +93,7 @@
   white-space: nowrap;
 }
 
-.screen-14 .overlap-91 {
-  height: 15px;
-  left: 45px;
-  position: absolute;
-  top: 126px;
-  width: 221px;
-}
-
-.screen-14 .line-32 {
+.swyvl-auth-screen .line-32 {
   height: 1px;
   left: 0;
   object-fit: cover;
@@ -110,7 +102,7 @@
   width: 221px;
 }
 
-.screen-14 .text-wrapper-181 {
+.swyvl-auth-screen .text-wrapper-181 {
   color: #d3d3d3;
   font-family: "Roboto", Helvetica;
   font-size: 10px;
@@ -124,15 +116,7 @@
   white-space: nowrap;
 }
 
-.screen-14 .overlap-92 {
-  height: 15px;
-  left: 45px;
-  position: absolute;
-  top: 174px;
-  width: 221px;
-}
-
-.screen-14 .authentication-form-control {
+.swyvl-auth-screen .authentication-form-control {
   color: #d3d3d3;
   font-family: "Roboto", Helvetica;
   font-size: 10px;
@@ -150,12 +134,8 @@
   transition: ease-in-out 0.3s;
 }
 
-.screen-14 .authentication-form-control:focus {
+.swyvl-auth-screen .authentication-form-control:focus {
   border-bottom: 1px solid grey;
-}
-
-.authentication-form.sign-up {
-  height: 50%;
 }
 
 .authentication-form.sign-up form {
@@ -221,38 +201,32 @@
   display: flex;
 }
 
-.screen-14 .authentication-button {
+.swyvl-auth-screen .authentication-button {
   background-image: url(../../static/img/path-17-1.png);
   background-position: 50% 50%;
   background-color: transparent;
   background-size: cover;
   height: 46px;
-  left: 70px;
-  position: absolute;
-  top: 275px;
   width: 175px;
   border: none;
 }
 
-.screen-14 .authentication-button.sign-up {
+.swyvl-auth-screen .authentication-button.sign-up {
   position: unset;
 }
 
-.screen-14 .text-wrapper-183 {
+.swyvl-auth-screen .text-wrapper-183 {
   color: #ffffff;
   font-family: "Roboto", Helvetica;
   font-size: 14px;
   font-weight: 700;
-  left: 68px;
   letter-spacing: 0.14px;
   line-height: 14px;
-  position: absolute;
   text-align: center;
-  top: 16px;
   white-space: nowrap;
 }
 
-.screen-14 .overlap-93 {
+.swyvl-auth-screen .overlap-93 {
   height: 15px;
   left: 46px;
   position: absolute;
@@ -260,11 +234,7 @@
   width: 221px;
 }
 
-.screen-14 .untitled-design-46 {
+.swyvl-auth-screen .logo-image {
   height: 407px;
-  left: 11px;
-  object-fit: cover;
-  position: absolute;
-  top: -88px;
   width: 407px;
 }

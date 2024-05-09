@@ -49,8 +49,11 @@ export default function SignInForm({ setLoading }: SignInFormProperties) {
   return (
     <>
       {
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="overlap-91">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="h-100 d-flex flex-column justify-content-center"
+        >
+          <div>
             <input
               className="authentication-form-control"
               placeholder="Enter Email Address"
@@ -59,7 +62,7 @@ export default function SignInForm({ setLoading }: SignInFormProperties) {
             />
             {errors.email && <span>This field is required</span>}
           </div>
-          <div className="overlap-92">
+          <div className="mt-3">
             <input
               className="authentication-form-control"
               placeholder="Enter Password"
@@ -71,7 +74,10 @@ export default function SignInForm({ setLoading }: SignInFormProperties) {
           </div>
 
           {/* Button to login*/}
-          <button type="submit" className="authentication-button onboarding">
+          <button
+            type="submit"
+            className="authentication-button onboarding mt-4"
+          >
             <div className="text-wrapper-183">Log In</div>
           </button>
         </form>

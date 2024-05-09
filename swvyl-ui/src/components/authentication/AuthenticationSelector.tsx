@@ -5,18 +5,30 @@ import { constants } from "../../constants/applicationConstants";
 import SignIn from "./signIn/SignIn";
 import SignUp from "./signUp/SignUp";
 import "./authentication.css";
+import Verification from "./Verification";
 
 export default function AuthenticationSelector() {
   const [logInToggled, setLogInToggled] = useState(true);
   const [isVerification, setIsVerification] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [verificationEmail, setVerificationEmail] = useState("");
+
+  function handleVerification(email: string) {
+    setVerificationEmail(email);
+    setIsVerification(true);
+  }
 
   return (
     <>
-      {!isLoading && (
+      {!isLoading && !isVerification && (
         <div className="login">
-          <div className="screen-14">
-            <div className="LOG-IN-10">
+          <div className="swyvl-auth-screen">
+            <div className="login-container d-flex flex-column align-items-center">
+              <img
+                className="logo-image"
+                alt="Untitled design"
+                src={uWalletLoginImage}
+              />
               <div
                 className={`authentication-form ${
                   logInToggled ? "sign-in" : "sign-up"
@@ -52,15 +64,10 @@ export default function AuthenticationSelector() {
                 {!logInToggled && (
                   <SignUp
                     setLoading={(isLoading: boolean) => setIsLoading(isLoading)}
-                    verificationHandler={() => setIsVerification(true)}
+                    verificationHandler={(email) => handleVerification(email)}
                   />
                 )}
               </div>
-              <img
-                className="untitled-design-46"
-                alt="Untitled design"
-                src={uWalletLoginImage}
-              />
             </div>
           </div>
         </div>
@@ -74,6 +81,8 @@ export default function AuthenticationSelector() {
           <CircularProgress />
         </div>
       )}
+
+      {isVerification && <Verification email={verificationEmail} />}
     </>
   );
 }
