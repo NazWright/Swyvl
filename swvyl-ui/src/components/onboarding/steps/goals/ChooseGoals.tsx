@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./steps.css";
-import capImage from "../../../static/img/cap-10.png";
-import wifiImage from "../../../static/img/wifi-3.png";
-import cellularConnection from "../../../static/img/cellular-connection-10.png";
+import "../steps.css";
+import capImage from "../../../../static/img/cap-10.png";
+import wifiImage from "../../../../static/img/wifi-3.png";
+import cellularConnection from "../../../../static/img/cellular-connection-10.png";
 import { useDispatch } from "react-redux";
 import { OnboardingStepsProps } from "../OnboardingStepsProps";
 

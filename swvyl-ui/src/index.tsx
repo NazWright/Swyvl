@@ -8,6 +8,10 @@ import store from "./app/store";
 import Dashboard from "./components/dashboard/Dashboard";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import OnboardingOrchestrator from "./components/onboarding/OnboardingOrchestrator";
+import OnboardingStepsOrchestrator from "./components/onboarding/steps/OnboardingStepsOrchestrator";
+import Chat from "./components/chat/Chat";
+import SpendingActivityFull from "./components/spending-activity/SpendingActivityFull";
+import Insights from "./components/insights/Insights";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -30,26 +34,22 @@ const router = createBrowserRouter([
   //   path: "/forgot-password",
   //   element: <ForgotPasswordForm />,
   // },
-  // {
-  //   path: "/onboarding-page",
-  //   element: <OnboardingPage />,
-  // },
-  // {
-  //   path: "/user/onboarding",
-  //   element: <OnboardingSteps />,
-  // },
-  // {
-  //   path: "/chat",
-  //   element: <Chat />,
-  // },
-  // {
-  //   path: "/spending-activity",
-  //   element: <SpendingActivityFull />,
-  // },
-  // {
-  //   path: "/insights",
-  //   element: <Insights />,
-  // },
+  {
+    path: "/user/onboarding",
+    element: <OnboardingStepsOrchestrator />,
+  },
+  {
+    path: "/chat",
+    element: <Chat />,
+  },
+  {
+    path: "/spending-activity",
+    element: <SpendingActivityFull />,
+  },
+  {
+    path: "/insights",
+    element: <Insights />,
+  },
 ]);
 
 root.render(

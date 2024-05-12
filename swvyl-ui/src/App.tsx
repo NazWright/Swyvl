@@ -62,7 +62,7 @@ function App() {
 
   function render() {
     if (user.sub && user.email) {
-      return <Dashboard accessToken="" />;
+      return <Dashboard />;
     }
 
     return <AuthenticationSelector />;

@@ -1,0 +1,475 @@
+.game {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.game .div-2 {
+  background-color: #f2f2f2;
+  height: 844px;
+  overflow: hidden;
+  position: relative;
+  width: 390px;
+}
+
+.game .overlap-5 {
+  height: 809px;
+  left: -9px;
+  position: absolute;
+  top: 56px;
+  width: 475px;
+}
+
+.game .overlap-6 {
+  height: 809px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 475px;
+}
+
+.game .rectangle-10 {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #dddbdb;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px #7b7b7b29;
+  height: 59px;
+  left: 0;
+  position: absolute;
+  top: 729px;
+  width: 428px;
+}
+
+.game .element-8 {
+  display: block;
+  height: 77px;
+  left: 17px;
+  object-fit: cover;
+  position: absolute;
+  top: 720px;
+  width: 103px;
+}
+
+.game .element-9 {
+  height: 87px;
+  left: 98px;
+  object-fit: cover;
+  position: absolute;
+  top: 715px;
+  width: 116px;
+}
+
+.game .element-10 {
+  height: 85px;
+  left: 214px;
+  object-fit: cover;
+  position: absolute;
+  top: 712px;
+  width: 113px;
+}
+
+.game .element-11 {
+  border-radius: 519px;
+  height: 108px;
+  left: 271px;
+  object-fit: cover;
+  position: absolute;
+  top: 701px;
+  width: 144px;
+}
+
+.game .text-wrapper-4 {
+  color: #44a1e5;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 25px;
+  font-weight: 700;
+  left: 50px;
+  letter-spacing: 0;
+  line-height: 25px;
+  position: absolute;
+  top: 34px;
+  white-space: nowrap;
+}
+
+.game .rectangle-11 {
+  background: linear-gradient(90deg, #ed6ea0 0%, #ec8c69 100%);
+  border-radius: 24px;
+  box-shadow: 0px 20px 20px #00000033;
+  height: 150px;
+  left: 33px;
+  position: absolute;
+  top: 334px;
+  width: 342px;
+}
+
+.game .rectangle-12 {
+  background: linear-gradient(90deg, #586fec 0%, #04befe 100%);
+  border-radius: 24px;
+  box-shadow: 0px 20px 20px #00000033;
+  height: 150px;
+  left: 35px;
+  position: absolute;
+  top: 126px;
+  width: 342px;
+}
+
+.game .rectangle-13 {
+  background: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%);
+  border-radius: 24px;
+  box-shadow: 0px 20px 20px #00000033;
+  height: 150px;
+  left: 33px;
+  position: absolute;
+  top: 542px;
+  width: 342px;
+}
+
+.game .icon-done {
+  height: 35px;
+  left: 50px;
+  position: absolute;
+  top: 148px;
+  width: 35px;
+}
+
+.game .vector-wrapper {
+  background-image: url(../../static/img/rectangle-3-2.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 13px;
+  height: 35px;
+  position: relative;
+}
+
+.game .vector {
+  height: 11px;
+  left: 10px;
+  object-fit: cover;
+  position: absolute;
+  top: 12px;
+  width: 15px;
+}
+
+.game .overlap-wrapper {
+  height: 35px;
+  left: 50px;
+  position: absolute;
+  top: 355px;
+  width: 35px;
+}
+
+.game .overlap-group-wrapper {
+  height: 35px;
+  left: 50px;
+  position: absolute;
+  top: 561px;
+  width: 35px;
+}
+
+.game .text-wrapper-5 {
+  color: #ffffff;
+  font-family: "SFProText-Semibold", Helvetica;
+  font-size: 17px;
+  font-weight: 600;
+  left: 51px;
+  letter-spacing: -0.41px;
+  line-height: 22px;
+  opacity: 0.7;
+  position: absolute;
+  top: 198px;
+  white-space: nowrap;
+}
+
+.game .travel-newbie {
+  color: #ffffff;
+  font-family: "SFProDisplay-Bold", Helvetica;
+  font-size: 28px;
+  font-weight: 700;
+  left: 49px;
+  letter-spacing: 0.36px;
+  line-height: 34px;
+  position: absolute;
+  top: 233px;
+  white-space: nowrap;
+}
+
+.game .level {
+  color: #ffffff;
+  font-family: "SFProText-Semibold", Helvetica;
+  font-size: 17px;
+  font-weight: 600;
+  left: 51px;
+  letter-spacing: -0.41px;
+  line-height: 22px;
+  opacity: 0.7;
+  position: absolute;
+  top: 406px;
+  white-space: nowrap;
+}
+
+.game .level-2 {
+  color: #ffffff;
+  font-family: "SFProText-Semibold", Helvetica;
+  font-size: 17px;
+  font-weight: 600;
+  left: 51px;
+  letter-spacing: -0.41px;
+  line-height: 22px;
+  opacity: 0.7;
+  position: absolute;
+  top: 612px;
+  white-space: nowrap;
+}
+
+.game .travel-newbie-2 {
+  color: #ffffff;
+  font-family: "SFProDisplay-Bold", Helvetica;
+  font-size: 28px;
+  font-weight: 700;
+  left: 49px;
+  letter-spacing: 0.36px;
+  line-height: 34px;
+  position: absolute;
+  top: 440px;
+  white-space: nowrap;
+}
+
+.game .travel-newbie-3 {
+  color: #ffffff;
+  font-family: "SFProDisplay-Bold", Helvetica;
+  font-size: 28px;
+  font-weight: 700;
+  left: 49px;
+  letter-spacing: 0.36px;
+  line-height: 34px;
+  position: absolute;
+  top: 646px;
+  white-space: nowrap;
+}
+
+.game .user {
+  height: 36px;
+  left: 326px;
+  position: absolute;
+  top: 0;
+  width: 36px;
+}
+
+.game .overlap-7 {
+  background-image: url(../../static/img/rectangle-1412-1-1x-png.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 100px;
+  height: 36px;
+}
+
+.game .group-3 {
+  height: 18px;
+  left: 11px;
+  position: relative;
+  top: 9px;
+  width: 14px;
+}
+
+.game .ellipse {
+  background-color: #08bcfe;
+  border: 1px solid;
+  border-color: #4b4b4b;
+  border-radius: 4px;
+  height: 9px;
+  left: 2px;
+  position: absolute;
+  top: 0;
+  width: 9px;
+}
+
+.game .ellipse-2 {
+  background-color: #08bcfe;
+  border: 1px solid;
+  border-color: #4b4b4b;
+  border-radius: 7px/4px;
+  height: 9px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 15px;
+}
+
+.game .group-4 {
+  height: 45px;
+  left: 275px;
+  position: absolute;
+  top: 0;
+  width: 36px;
+}
+
+.game .overlap-8 {
+  height: 44px;
+  position: relative;
+}
+
+.game .img-wrapper {
+  height: 36px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 36px;
+}
+
+.game .rectangle-14 {
+  border-radius: 100px;
+  height: 36px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 36px;
+}
+
+.game .ellipse-3 {
+  background-color: #fdb61c;
+  border-radius: 7px;
+  height: 14px;
+  left: 4px;
+  position: absolute;
+  top: 11px;
+  width: 14px;
+}
+
+.game .element-12 {
+  color: #4b4b4b;
+  font-family: "SFProText-Semibold", Helvetica;
+  font-size: 17px;
+  font-weight: 600;
+  height: 36px;
+  left: 19px;
+  letter-spacing: -0.41px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  width: 17px;
+}
+
+.game .element-13 {
+  height: 251px;
+  left: 169px;
+  object-fit: cover;
+  position: absolute;
+  top: 25px;
+  width: 251px;
+}
+
+.game .element-14 {
+  height: 305px;
+  left: 134px;
+  object-fit: cover;
+  position: absolute;
+  top: 201px;
+  width: 305px;
+}
+
+.game .element-15 {
+  height: 347px;
+  left: 128px;
+  object-fit: cover;
+  position: absolute;
+  top: 382px;
+  width: 347px;
+}
+
+.game .text-wrapper-6 {
+  color: #1259d4;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 51px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 72px;
+  white-space: nowrap;
+}
+
+.game .status-bar-3 {
+  height: 44px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 390px;
+}
+
+.game .cellular-connection-3 {
+  height: 11px;
+  left: 303px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 17px;
+}
+
+.game .wifi-3 {
+  height: 11px;
+  left: 325px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 15px;
+}
+
+.game .time-3 {
+  color: #4b4b4b;
+  font-family: "SFProDisplay-Semibold", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  left: 23px;
+  letter-spacing: -0.28px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: 56px;
+}
+
+.game .battary-3 {
+  height: 12px;
+  left: 346px;
+  position: absolute;
+  top: 18px;
+  width: 24px;
+}
+
+.game .cap-3 {
+  height: 4px;
+  left: 23px;
+  object-fit: cover;
+  position: absolute;
+  top: 4px;
+  width: 1px;
+}
+
+.game .overlap-group-2 {
+  background-image: url(../../static/img/rectangle-53-2.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 3px;
+  height: 12px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
+
+.game .rectangle-15 {
+  background-color: #4b4b4b;
+  border-radius: 1px;
+  height: 8px;
+  left: 2px;
+  position: relative;
+  top: 2px;
+  width: 14px;
+}

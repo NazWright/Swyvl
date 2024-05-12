@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import "./steps.css";
-import capImage from "../../../static/img/cap-10.png";
-import wifiImage from "../../../static/img/wifi-3.png";
-import shape40 from "../../../static/img/shape-40.png";
-import shape41 from "../../../static/img/shape-41.png";
-import shape42 from "../../../static/img/shape-42.png";
-import shape43 from "../../../static/img/shape-43.png";
-import shape44 from "../../../static/img/shape-44.png";
-import path128 from "../../../static/img/path-128.png";
-import cellularConnection from "../../../static/img/cellular-connection-10.png";
+import "../steps.css";
+import capImage from "../../../../static/img/cap-10.png";
+import wifiImage from "../../../../static/img/wifi-3.png";
+import shape40 from "../../../../static/img/shape-40.png";
+import shape41 from "../../../../static/img/shape-41.png";
+import shape42 from "../../../../static/img/shape-42.png";
+import shape43 from "../../../../static/img/shape-43.png";
+import shape44 from "../../../../static/img/shape-44.png";
+import path128 from "../../../../static/img/path-128.png";
+import cellularConnection from "../../../../static/img/cellular-connection-10.png";
 import { OnboardingStepsProps } from "../OnboardingStepsProps";
 import AddCardForm from "./AddCardForm";
 

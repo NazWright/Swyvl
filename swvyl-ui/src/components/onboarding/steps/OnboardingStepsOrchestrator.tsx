@@ -41,11 +41,8 @@ export default function OnboardingStepsOrchestrator() {
         return (
           <OnboardingComplete handleCompletedStep={markPageStatusAsComplete} />
         );
-
-      default:
-        navigate("/");
     }
   }
 
-  return getCurrentPageElement(pageIndex);
+  return <div>{getCurrentPageElement(pageIndex)}</div>;
 }
