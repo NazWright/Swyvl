@@ -17,13 +17,15 @@
   background-color: #ffffff;
   border-radius: 33px;
   box-shadow: 0px 5px 15px #30333e29;
-  height: 365px;
+  height: 40vmin;
   left: 57px;
   top: 324px;
-  width: 315px;
+  width: 32vmin;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 315px;
+  min-height: 350px;
 }
 
 .swyvl-auth-screen .overlap-89 {

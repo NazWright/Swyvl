@@ -32,7 +32,7 @@ export default function SignUpForm({
             email: data.email,
             family_name: data.familyName,
             given_name: data.givenName,
-            picture: "yoooo",
+            picture: "null",
           },
         },
       });

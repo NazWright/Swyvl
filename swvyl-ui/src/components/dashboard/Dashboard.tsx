@@ -8,8 +8,7 @@ import { RootState } from "../../app/store";
 interface DashboardProps {
   accessToken?: string;
 }
-
-export default function Dashboard({ accessToken }: DashboardProps) {
+function Dashboard({ accessToken }: DashboardProps) {
   const dispatch = useDispatch();
 
   const user = useSelector((state: RootState) => state.authSlice);
@@ -31,3 +30,5 @@ export default function Dashboard({ accessToken }: DashboardProps) {
     </div>
   );
 }
+
+export default Dashboard;

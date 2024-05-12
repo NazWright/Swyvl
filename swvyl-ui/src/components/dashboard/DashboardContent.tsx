@@ -11,5 +11,10 @@ interface DashboardContentProps {
 export default function DashboardContent({
   cardHolderName,
 }: DashboardContentProps) {
-  return <div>DashboardContent</div>;
+  return (
+    <div>
+      DashboardContent
+      <button>Log out</button>
+    </div>
+  );
 }

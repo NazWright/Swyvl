@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { SignInProperties, SignInRequest } from "../AuthenticationProperties";
 import { useForm } from "react-hook-form";
-import inputBottomBorderImage from "../../../static/img/line-6.png";
-import { signIn } from "aws-amplify/auth";
+import { fetchUserAttributes, signIn } from "aws-amplify/auth";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../../app/features/authSlice";
+import { User } from "../../../model/User";
+import { infoLogFormatter } from "../../../utils/logFormatter";
 
 interface SignInFormProperties extends SignInProperties {}
 
@@ -13,7 +17,11 @@ export default function SignInForm({ setLoading }: SignInFormProperties) {
     formState: { errors },
   } = useForm();
 
+  const navigate = useNavigate();
+
   const [errorMessage, setErrorMessage] = useState("");
+
+  const dispatch = useDispatch();
 
   const onSubmit = async (data: any) => {
     console.info("Checking user's sign in credentials... ");
@@ -24,19 +32,16 @@ export default function SignInForm({ setLoading }: SignInFormProperties) {
         password: data.password,
       } as SignInRequest;
       const signInResponse = await signIn(signInRequest);
+      if (signInResponse.isSignedIn) {
+        const userAttributes = await fetchUserAttributes();
+        const authenticatedUser = userAttributes as User;
+        dispatch(setUser(authenticatedUser));
+        infoLogFormatter(
+          "Successfully retrieved attributes, signing in user..."
+        );
+        navigate("/dashboard");
+      }
       console.log(signInResponse);
-      // const user = {
-      //   username: authenticatedUserMeta.username,
-      //   email: authenticatedUserMeta.attributes.email,
-      //   phone_number: authenticatedUserMeta.attributes.phone_number,
-      //   family_name: authenticatedUserMeta.attributes.family_name,
-      //   given_name: authenticatedUserMeta.attributes.given_name,
-      //   password: data.password,
-      // };
-      // dispatch(setUser(user));
-      // //triggerVerification();
-      // dispatch(setAuthenticated(true));
-      //vebkat-7Jutfe-xawqif
     } catch (error) {
       console.error(error);
       setErrorMessage(

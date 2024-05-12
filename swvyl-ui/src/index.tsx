@@ -5,14 +5,56 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./app/store";
+import Dashboard from "./components/dashboard/Dashboard";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+  },
+  // {
+  //   path: "/profile",
+  //   element: <Profile />,
+  // },
+  // {
+  //   path: "/forgot-password",
+  //   element: <ForgotPasswordForm />,
+  // },
+  // {
+  //   path: "/onboarding-page",
+  //   element: <OnboardingPage />,
+  // },
+  // {
+  //   path: "/user/onboarding",
+  //   element: <OnboardingSteps />,
+  // },
+  // {
+  //   path: "/chat",
+  //   element: <Chat />,
+  // },
+  // {
+  //   path: "/spending-activity",
+  //   element: <SpendingActivityFull />,
+  // },
+  // {
+  //   path: "/insights",
+  //   element: <Insights />,
+  // },
+]);
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <RouterProvider router={router} />
     </Provider>
   </React.StrictMode>
 );
