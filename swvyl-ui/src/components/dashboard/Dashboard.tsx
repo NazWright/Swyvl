@@ -18,6 +18,9 @@ import { useNavigate } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 import { signOut } from "aws-amplify/auth";
 import StatusBar from "./StatusBar";
+import { PlaidAccount } from "../../model/PlaidAccount";
+import { PlaidTransaction } from "../../model/PlaidTransaction";
+import { PlaidTransactionSyncResponse } from "../../model/PlaidTransactionsSyncResponse";
 // The usePlaidLink hook manages Plaid Link creation
 // It does not return a destroy function;
 // instead, on unmount it automatically destroys the Link instance
@@ -41,8 +44,9 @@ export default function Dashboard() {
     }
   }
 
-  const transactions = transactionSyncJson.added;
-  const accounts = accountsGetResponseJson.accounts;
+  const transactions = transactionSyncJson.added as PlaidTransaction[];
+
+  const accounts = accountsGetResponseJson.accounts as [PlaidAccount];
   const incomes = incomesJson.bank_income;
 
   return (

@@ -72,9 +72,9 @@ export default function SignUpForm({
 
   return (
     <form className="signup-form" onSubmit={handleSubmit(onSubmit)}>
-      {formInputs.map((input) => {
+      {formInputs.map((input: any, index: number) => {
         return (
-          <div>
+          <div key={index}>
             <input
               className="authentication-form-control mb-3"
               placeholder={input.placeholder}

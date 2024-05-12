@@ -6,12 +6,14 @@ import MyBalance from "./MyBalance";
 import CreditCard from "../shared/CreditCard";
 import RecentTransactionsList from "./RecentTransactionsList";
 import SpendingActivity from "./SpendingActivity";
+import { PlaidAccount } from "../../model/PlaidAccount";
+import { PlaidTransaction } from "../../model/PlaidTransaction";
 
 interface DashboardContentProps {
   addNewCardHandler: (event: React.MouseEvent) => void;
-  accounts: any;
+  accounts: PlaidAccount[];
   cardHolderName: string;
-  transactions: any;
+  transactions: PlaidTransaction[];
   income: any;
 }
 
@@ -31,6 +33,7 @@ export default function DashboardContent({
   const selectedAccount = accounts.filter(
     (account: any) => account["account_id"] === selectedAccountId
   )[0];
+
   const { balances } = selectedAccount;
 
   const selectCard = React.useCallback(
@@ -51,7 +54,12 @@ export default function DashboardContent({
         <div className="overlap-15">
           <SpendingActivity />
           <SendRequestMoney />
-          <RecentTransactionsList expenses={transactions} incomes={income} />
+          <RecentTransactionsList
+            expenses={transactions.filter(
+              (transaction) => transaction.account_id === selectedAccountId
+            )}
+            incomes={income}
+          />
           {/* Credit card */}
           <div className="scroll-group-3">
             {accounts.map((account: any, index: number) => {
@@ -78,7 +86,7 @@ export default function DashboardContent({
           </div>
           {/* Credit card End */}
           {/* TODO: Update balance type to be dynamic */}
-          <MyBalance balance={200} />
+          <MyBalance balance={selectedAccount.balances.available || 0} />
         </div>
         <AdditionalCards addNewCardHandler={addNewCardHandler} />
         <Footer />

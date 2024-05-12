@@ -4,10 +4,10 @@ import expensesIcon from "../../static/img/14-7.png";
 import incomesIcon from "../../static/img/14-6.png";
 import RecentTransactions from "./RecentTransactions";
 import "./Dashboard.css";
-import activeButtonImagePath from "../../static/img/path-30-1.png";
+import { PlaidTransaction } from "../../model/PlaidTransaction";
 
 interface RecentTransactionsListProps {
-  expenses: [any];
+  expenses: PlaidTransaction[];
   incomes: [any];
 }
 
@@ -19,25 +19,14 @@ export default function RecentTransactionsList({
   const [selectedFilter, setSelectedFilter] = useState("all");
 
   function filterTransactions() {
-    const expensesWithFlag = expenses.map((expense) => {
-      return {
-        ...expense,
-        isExpense: true,
-      };
-    });
-
-    const incomesWithFlag = incomes.map((income) => {
-      return {
-        ...income,
-        isExpense: true,
-      };
-    });
-
-    return selectedFilter === "all"
-      ? [...expensesWithFlag, ...incomesWithFlag]
-      : selectedFilter === "expenses"
-      ? expensesWithFlag
-      : incomesWithFlag;
+    switch (selectedFilter) {
+      default:
+        return [...expenses, incomes];
+      case "expenses":
+        return expenses;
+      case "incomes":
+        return incomes;
+    }
   }
 
   const displayedTransactions = filterTransactions();
@@ -82,18 +71,22 @@ export default function RecentTransactionsList({
       </>
 
       <div className="scroll-group-2">
-        {expenses.map((transaction) => {
-          return (
-            <RecentTransactions
-              key={transaction.transaction_id}
-              merchant={transaction.merchant_name}
-              amount={transaction.amount}
-              currency={transaction.iso_currency_code}
-              dateAndTime={transaction.authorized_datetime}
-              isExpense={transaction.isExpense}
-            />
-          );
-        })}
+        {expenses.length <= 0 && <div> No recent transactions. </div>}
+
+        {displayedTransactions.length > 0 &&
+          displayedTransactions
+            .filter((transaction) => transaction.merchant_name)
+            .map((transaction) => {
+              return (
+                <RecentTransactions
+                  key={transaction.transaction_id}
+                  merchant={transaction.merchant_name}
+                  amount={transaction.amount}
+                  currency={transaction.iso_currency_code}
+                  dateAndTime={transaction.authorized_datetime}
+                />
+              );
+            })}
       </div>
 
       <>

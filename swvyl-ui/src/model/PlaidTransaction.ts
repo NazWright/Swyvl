@@ -1,12 +1,12 @@
 export interface PlaidTransaction {
   account_id: string;
-  account_owner?: string;
+  account_owner?: string | null;
   amount: Number;
   iso_currency_code: string;
-  unofficial_currency_code?: string;
-  category: string;
-  check_number?: string;
-  counterparties: Array<CounterParty>;
+  unofficial_currency_code?: string | null;
+  category: string[];
+  check_number?: string | null;
+  counterparties: CounterParty[];
   date: string;
   datetime: string;
   authorized_date: string;
@@ -37,19 +37,19 @@ export interface PlaidTransaction {
   };
   personal_finance_category_icon_url: string;
   transaction_id: string;
-  transaction_code?: string;
+  transaction_code?: string | null;
   transaction_type: string;
 }
 
 export type PaymentMeta = {
-  by_order_of?: string;
-  payee?: string;
-  payer?: string;
-  payment_method?: string;
-  payment_processor?: string;
-  ppd_id?: string;
-  reason?: string;
-  reference_number?: string;
+  by_order_of?: string | null;
+  payee?: string | null;
+  payer?: string | null;
+  payment_method?: string | null;
+  payment_processor?: string | null;
+  ppd_id?: string | null;
+  reason?: string | null;
+  reference_number?: string | null;
 };
 
 export type CounterParty = {

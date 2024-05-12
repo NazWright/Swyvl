@@ -3,20 +3,19 @@ import debtToAccountIcon from "../../static/img/untitled-design-26-54.png";
 import creditToAccountIcon from "../../static/img/untitled-design-26-51.png";
 
 interface RecentTransactionProps {
-  isExpense: boolean;
-  amount: number;
+  amount: Number;
   currency: string;
   merchant: string;
   dateAndTime: string;
 }
 
 function RecentTransaction({
-  isExpense = true,
   amount,
   currency,
   merchant,
   dateAndTime,
 }: RecentTransactionProps) {
+  const isExpense = true;
   const amountSign = isExpense ? "-" : "+";
   const numberOfDecimalPlaces = 2;
 
