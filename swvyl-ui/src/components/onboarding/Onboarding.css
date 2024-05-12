@@ -1,0 +1,157 @@
+.onboarding-graphic-one {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.onboarding-graphic-one .content-section {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+}
+
+.onboarding-graphic-one .overlap-74 {
+  height: 104px;
+  left: 7px;
+  width: 100%;
+}
+
+.onboarding-graphic-one .track-all-you {
+  color: #087dea;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+}
+
+.onboarding-graphic-one .manage-your-spending {
+  color: #087dea;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 22px;
+  font-weight: 700;
+  left: 46px;
+  letter-spacing: 0;
+  line-height: 22px;
+  text-align: center;
+  top: 49px;
+  white-space: nowrap;
+}
+
+.onboarding-graphic-one .element-74 {
+  height: 473px;
+  left: -14px;
+  object-fit: cover;
+  position: absolute;
+  top: 123px;
+  width: 468px;
+}
+
+.onboarding-graphic-one .mini-uwallet-logo {
+  height: 151px;
+  left: 277px;
+  object-fit: cover;
+  top: 827px;
+  width: 151px;
+}
+
+.onboarding-graphic-one .elipsis-group {
+  height: 11px;
+  width: 73px;
+}
+
+.onboarding-graphic-one .group-114 {
+  height: 11px;
+  position: relative;
+}
+
+.onboarding-graphic-one .ellipse-19 {
+  border: 1px solid;
+  border-color: #707070;
+  border-radius: 5.5px;
+  height: 11px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 11px;
+}
+
+.onboarding-graphic-one .ellipse-11 {
+  border: 1px solid;
+  border-color: #707070;
+  border-radius: 5.5px;
+  height: 11px;
+  position: absolute;
+  top: 0;
+  width: 11px;
+  left: 31px;
+}
+
+.ellipse-active {
+  background-color: #fdc54c;
+}
+
+.onboarding-graphic-one .path-113 {
+  height: 11px;
+  left: 31px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 11px;
+}
+
+.onboarding-graphic-one .ellipse-20 {
+  border: 1px solid;
+  border-color: #707070;
+  border-radius: 5.5px;
+  height: 11px;
+  left: 62px;
+  position: absolute;
+  top: 0;
+  width: 11px;
+}
+
+.onboarding-graphic-one .next-button {
+  border-radius: 23px;
+  height: 46px;
+  left: 126px;
+  top: 774px;
+  width: 175px;
+}
+
+.onboarding-graphic-one .rectangle-83 {
+  background-color: #0099ff;
+  border-radius: 23px;
+  height: 46px;
+  left: 0;
+  top: 0;
+  width: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-all-you,
+.manage-your-spending {
+  width: 100%;
+  text-wrap: wrap !important;
+}
+
+.onboarding-graphic-one .text-wrapper-161 {
+  color: #ffffff;
+  font-family: "Roboto", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 72px;
+  letter-spacing: 0.14px;
+  line-height: 14px;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+}

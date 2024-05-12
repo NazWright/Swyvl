@@ -5,6 +5,7 @@ import PageTwoGraphic from "./graphics/PageTwoGraphic";
 import PageThreeGraphic from "./graphics/PageThreeGraphic";
 import uWalletMiniImage from "../../static/img/untitled-design-36-2.png";
 import { pages } from "../../constants/onboardingOverviewPages";
+import "./Onboarding.css";
 
 export default function OnboardingOrchestrator() {
   const [pageIndex, setPageIndex] = useState(0);

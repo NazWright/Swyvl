@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import store from "./app/store";
 import Dashboard from "./components/dashboard/Dashboard";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import OnboardingOrchestrator from "./components/onboarding/OnboardingOrchestrator";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -21,10 +22,10 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <Dashboard />,
   },
-  // {
-  //   path: "/profile",
-  //   element: <Profile />,
-  // },
+  {
+    path: "/onboarding",
+    element: <OnboardingOrchestrator />,
+  },
   // {
   //   path: "/forgot-password",
   //   element: <ForgotPasswordForm />,
