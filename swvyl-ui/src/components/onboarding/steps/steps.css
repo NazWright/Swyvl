@@ -1,0 +1,1672 @@
+/* choose your goals step */
+
+.LOG-IN-screen {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.LOG-IN-screen .LOG-IN-2 {
+  background-color: #f7f7f7;
+  height: 926px;
+  position: relative;
+  width: 428px;
+}
+
+.LOG-IN-screen .status-bar-2 {
+  height: 44px;
+  left: 19px;
+  position: absolute;
+  top: 0;
+  width: 390px;
+}
+
+.LOG-IN-screen .img {
+  height: 11px;
+  left: 303px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 17px;
+}
+
+.LOG-IN-screen .wifi-2 {
+  height: 11px;
+  left: 325px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 15px;
+}
+
+.LOG-IN-screen .time-2 {
+  color: #353535;
+  font-family: "SFProDisplay-Semibold", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  left: 23px;
+  letter-spacing: -0.28px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: 56px;
+}
+
+.LOG-IN-screen .battary-2 {
+  height: 12px;
+  left: 346px;
+  position: absolute;
+  top: 18px;
+  width: 24px;
+}
+
+.LOG-IN-screen .cap-2 {
+  height: 4px;
+  left: 23px;
+  object-fit: cover;
+  position: absolute;
+  top: 4px;
+  width: 1px;
+}
+
+.LOG-IN-screen .rectangle-wrapper {
+  background-image: url(../../../static/img/rectangle-53-10.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 3px;
+  height: 12px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
+
+.LOG-IN-screen .rectangle-4 {
+  background-color: #353535;
+  border-radius: 1px;
+  height: 8px;
+  left: 2px;
+  position: relative;
+  top: 2px;
+  width: 14px;
+}
+
+.LOG-IN-screen .overlap-4 {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #bfbfbf;
+  border-radius: 14px;
+  height: 12px;
+  left: 70px;
+  position: absolute;
+  top: 78px;
+  width: 288px;
+}
+
+.LOG-IN-screen .rectangle-5 {
+  background-color: #fdb61c;
+  border-radius: 14px;
+  height: 12px;
+  left: -1px;
+  position: relative;
+  top: -1px;
+  width: 184px;
+}
+
+.LOG-IN-screen .text-wrapper-4 {
+  color: #3180f0;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  left: 162px;
+  letter-spacing: 0;
+  line-height: 10px;
+  position: absolute;
+  top: 48px;
+  white-space: nowrap;
+}
+
+.LOG-IN-screen .p {
+  color: #707071;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 66px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 126px;
+  white-space: nowrap;
+}
+
+.LOG-IN-screen .LEARNING-EARNS {
+  color: #707071;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 66px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 179px;
+  white-space: nowrap;
+}
+
+.LOG-IN-screen .overlap-wrapper {
+  height: 60px;
+  left: 52px;
+  position: absolute;
+  top: 260px;
+  width: 183px;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+}
+
+.LOG-IN-screen .SAVINGS-INVEST-wrapper {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 78px;
+  left: -9px;
+  position: relative;
+  top: -6px;
+  width: 201px;
+}
+
+.LOG-IN-screen .SAVINGS-INVEST {
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 29px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 28px;
+  white-space: nowrap;
+}
+
+.LOG-IN-screen .group-3 {
+  background-color: #0099ff;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 251px;
+  position: absolute;
+  top: 325px;
+  width: 132px;
+}
+
+.LOG-IN-screen .goal {
+  background-color: #eae7e7;
+  color: #3180f0;
+  transition: 0.3s ease-in-out;
+}
+
+.LOG-IN-screen .goal:hover {
+  scale: 1.1;
+}
+
+.LOG-IN-screen .goal:active {
+  scale: 0.8;
+}
+
+.LOG-IN-screen .goal.selected {
+  background-color: #0099ff;
+  color: white;
+}
+
+.LOG-IN-screen .text-wrapper-5 {
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 26px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 24px;
+  white-space: nowrap;
+}
+
+.LOG-IN-screen .group-4 {
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 165px;
+  position: absolute;
+  top: 419px;
+  width: 131px;
+}
+
+.LOG-IN-screen .text-wrapper-6 {
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 22px;
+  white-space: nowrap;
+}
+
+.LOG-IN-screen .group-5 {
+  background-color: #eae7e7;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 70px;
+  position: absolute;
+  top: 521px;
+  width: 87px;
+}
+
+.LOG-IN-screen .text-wrapper-7 {
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 23px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 22px;
+  white-space: nowrap;
+}
+
+.LOG-IN-screen .group-6 {
+  background-color: #eae7e7;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 36px;
+  position: absolute;
+  top: 394px;
+  width: 85px;
+}
+
+.LOG-IN-screen .text-wrapper-8 {
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 19px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 22px;
+  white-space: nowrap;
+}
+
+.LOG-IN-screen .group-7 {
+  background-color: #eae7e7;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 214px;
+  position: absolute;
+  top: 527px;
+  width: 94px;
+}
+
+.LOG-IN-screen .text-wrapper-9 {
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 22px;
+  white-space: nowrap;
+}
+
+.LOG-IN-screen .group-8 {
+  background-color: #eae7e7;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 258px;
+  position: absolute;
+  top: 621px;
+  width: 124px;
+}
+
+.LOG-IN-screen .text-wrapper-10 {
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 22px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 22px;
+  white-space: nowrap;
+}
+
+.LOG-IN-screen .group-9 {
+  background-color: #eae7e7;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 46px;
+  position: absolute;
+  top: 681px;
+  width: 119px;
+}
+
+.LOG-IN-screen .text-wrapper-11 {
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 21px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 22px;
+  white-space: nowrap;
+}
+
+.LOG-IN-screen .group-10 {
+  background-color: #eae7e7;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 229px;
+  position: absolute;
+  top: 695px;
+  width: 58px;
+}
+
+.LOG-IN-screen .text-wrapper-12 {
+  color: #3180f0;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 6px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 22px;
+  white-space: nowrap;
+}
+
+.LOG-IN-screen .group-11 {
+  background-color: #0099ff;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 46px;
+  position: absolute;
+  top: 775px;
+  width: 336px;
+}
+
+.LOG-IN-screen .text-wrapper-13 {
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 125px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+}
+
+/* choose your goals step end */
+
+/* add new card start  */
+
+.div-wrapper {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.div-wrapper .LOG-IN-3 {
+  background-color: #f7f7f7;
+  height: 926px;
+  overflow: hidden;
+  position: relative;
+  width: 428px;
+}
+
+.div-wrapper .status-bar-3 {
+  height: 44px;
+  left: 19px;
+  position: absolute;
+  top: 0;
+  width: 390px;
+}
+
+.div-wrapper .cellular-connection-2 {
+  height: 11px;
+  left: 303px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 17px;
+}
+
+.div-wrapper .wifi-3 {
+  height: 11px;
+  left: 325px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 15px;
+}
+
+.div-wrapper .time-3 {
+  color: #353535;
+  font-family: "SFProDisplay-Semibold", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  left: 23px;
+  letter-spacing: -0.28px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: 56px;
+}
+
+.div-wrapper .battary-3 {
+  height: 12px;
+  left: 346px;
+  position: absolute;
+  top: 18px;
+  width: 24px;
+}
+
+.div-wrapper .cap-3 {
+  height: 4px;
+  left: 23px;
+  object-fit: cover;
+  position: absolute;
+  top: 4px;
+  width: 1px;
+}
+
+.div-wrapper .overlap-group-2 {
+  background-image: url(../../../static/img/rectangle-53-10.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 3px;
+  height: 12px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
+
+.div-wrapper .rectangle-6 {
+  background-color: #353535;
+  border-radius: 1px;
+  height: 8px;
+  left: 2px;
+  position: relative;
+  top: 2px;
+  width: 14px;
+}
+
+.div-wrapper .overlap-5 {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #bfbfbf;
+  border-radius: 14px;
+  height: 12px;
+  left: 70px;
+  position: absolute;
+  top: 78px;
+  width: 288px;
+}
+
+.div-wrapper .rectangle-7 {
+  background-color: #fdb61c;
+  border-radius: 14px;
+  height: 12px;
+  left: -1px;
+  position: relative;
+  top: -1px;
+  width: 92px;
+}
+
+.div-wrapper .text-wrapper-14 {
+  color: #3180f0;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  left: 162px;
+  letter-spacing: 0;
+  line-height: 10px;
+  position: absolute;
+  top: 48px;
+  white-space: nowrap;
+}
+
+.div-wrapper .overlap-6 {
+  height: 909px;
+  left: 46px;
+  position: absolute;
+  top: 152px;
+  width: 352px;
+}
+
+.div-wrapper .scroll-group {
+  height: 909px;
+  left: 16px;
+  overflow-y: scroll;
+  top: 0;
+  width: 336px;
+}
+
+.div-wrapper .group-12 {
+  height: 574px;
+  position: relative;
+  width: 336px;
+}
+
+.div-wrapper .card {
+  height: 193px;
+  left: 0;
+  position: absolute;
+  top: 41px;
+  width: 336px;
+}
+
+.div-wrapper .overlap-7 {
+  border-radius: 10px;
+  height: 193px;
+  position: relative;
+}
+
+.div-wrapper .group-wrapper {
+  background-color: #fdb61c;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 193px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 336px;
+}
+
+.div-wrapper .waves-wrapper {
+  height: 193px;
+  overflow: hidden;
+}
+
+.div-wrapper .waves {
+  background-image: url(../../../static/img/original-path-6-97883563-group.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 321px;
+  left: -18px;
+  opacity: 0.12;
+  position: relative;
+  top: 50px;
+  width: 530px;
+}
+
+.div-wrapper .visa-pay-logo {
+  height: 16px;
+  left: 11px;
+  position: absolute;
+  top: 21px;
+  width: 52px;
+}
+
+.div-wrapper .overlap-8 {
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 25px;
+}
+
+.div-wrapper .shape {
+  height: 15px;
+  left: 18px;
+  object-fit: cover;
+  position: absolute;
+  top: 1px;
+  width: 7px;
+}
+
+.div-wrapper .shape-2 {
+  height: 15px;
+  left: 4px;
+  object-fit: cover;
+  position: absolute;
+  top: 1px;
+  width: 15px;
+}
+
+.div-wrapper .shape-3 {
+  height: 8px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 10px;
+}
+
+.div-wrapper .overlap-group-3 {
+  height: 16px;
+  left: 25px;
+  position: absolute;
+  top: 0;
+  width: 27px;
+}
+
+.div-wrapper .shape-4 {
+  height: 16px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 13px;
+}
+
+.div-wrapper .shape-5 {
+  height: 15px;
+  left: 12px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+.div-wrapper .text-wrapper-15 {
+  color: #ffffff;
+  font-family: "HelveticaNeue", Helvetica;
+  font-size: 8px;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: 8px;
+  opacity: 0.47;
+  position: absolute;
+  top: 148px;
+  white-space: nowrap;
+}
+
+.div-wrapper .stephen-austin {
+  color: #ffffff;
+  font-family: "HelveticaNeue", Helvetica;
+  font-size: 12px;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: 12px;
+  position: absolute;
+  top: 164px;
+  white-space: nowrap;
+}
+
+.div-wrapper .text-wrapper-16 {
+  color: #ffffff;
+  font-family: "HelveticaNeue", Helvetica;
+  font-size: 8px;
+  left: 265px;
+  letter-spacing: 0;
+  line-height: 8px;
+  opacity: 0.47;
+  position: absolute;
+  text-align: right;
+  top: 148px;
+  white-space: nowrap;
+}
+
+.div-wrapper .text-wrapper-17 {
+  color: #ffffff;
+  font-family: "HelveticaNeue", Helvetica;
+  font-size: 12px;
+  left: 279px;
+  letter-spacing: 0;
+  line-height: 12px;
+  position: absolute;
+  text-align: right;
+  top: 164px;
+  white-space: nowrap;
+}
+
+.div-wrapper .div-2 {
+  height: 23px;
+  left: 15px;
+  position: absolute;
+  top: 103px;
+  width: 223px;
+}
+
+.div-wrapper .path {
+  height: 6px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 6px;
+}
+
+.div-wrapper .path-2 {
+  height: 6px;
+  left: 12px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 6px;
+}
+
+.div-wrapper .path-3 {
+  height: 6px;
+  left: 23px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 6px;
+}
+
+.div-wrapper .path-4 {
+  height: 6px;
+  left: 35px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 6px;
+}
+
+.div-wrapper .path-5 {
+  height: 6px;
+  left: 57px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 6px;
+}
+
+.div-wrapper .path-6 {
+  height: 6px;
+  left: 69px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 6px;
+}
+
+.div-wrapper .path-7 {
+  height: 6px;
+  left: 81px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 6px;
+}
+
+.div-wrapper .path-8 {
+  height: 6px;
+  left: 92px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 6px;
+}
+
+.div-wrapper .path-9 {
+  height: 6px;
+  left: 115px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 6px;
+}
+
+.div-wrapper .path-10 {
+  height: 6px;
+  left: 126px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 6px;
+}
+
+.div-wrapper .path-11 {
+  height: 6px;
+  left: 138px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 6px;
+}
+
+.div-wrapper .path-12 {
+  height: 6px;
+  left: 150px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 6px;
+}
+
+.div-wrapper .text-wrapper-18 {
+  color: #ffffff;
+  font-family: "HelveticaNeue-Light", Helvetica;
+  font-size: 21px;
+  font-weight: 300;
+  height: 25px;
+  left: 170px;
+  letter-spacing: 0;
+  line-height: 21px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 53px;
+}
+
+.div-wrapper .text-wrapper-19 {
+  color: #707071;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 2px;
+  white-space: nowrap;
+}
+
+.div-wrapper .element-wrapper {
+  background-color: #eae7e7;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 0;
+  position: absolute;
+  top: 304px;
+  width: 336px;
+  display: flex;
+}
+
+.div-wrapper .element {
+  color: #707071;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 23px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 22px;
+  white-space: nowrap;
+}
+
+.div-wrapper .text-wrapper-20 {
+  color: #707071;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 269px;
+  white-space: nowrap;
+}
+
+.div-wrapper .group-13 {
+  height: 92px;
+  left: 1px;
+  position: absolute;
+  top: 377px;
+  width: 334px;
+}
+
+.div-wrapper .overlap-9 {
+  background-color: #eae7e7;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 0;
+  position: absolute;
+  top: 32px;
+  width: 96px;
+}
+
+.div-wrapper .text-wrapper-21 {
+  color: #707071;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+}
+
+.div-wrapper .overlap-10 {
+  background-color: #eae7e7;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 184px;
+  position: absolute;
+  top: 32px;
+  width: 150px;
+}
+
+.div-wrapper input {
+  border: none;
+}
+
+.div-wrapper input {
+  color: #707071;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.div-wrapper button {
+  border: none;
+}
+
+.div-wrapper .text-wrapper-22 {
+  color: #707071;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 49px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+}
+
+.div-wrapper .text-wrapper-23 {
+  color: #707071;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 272px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 2px;
+  white-space: nowrap;
+}
+
+.div-wrapper .text-wrapper-24 {
+  color: #707071;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 4px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 2px;
+  white-space: nowrap;
+}
+
+.div-wrapper .overlap-11 {
+  height: 92px;
+  left: 0;
+  position: absolute;
+  top: 482px;
+  width: 336px;
+}
+
+.div-wrapper .group-14 {
+  height: 92px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 336px;
+}
+
+.div-wrapper .rectangle-8 {
+  background-color: #eae7e7;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 0;
+  position: absolute;
+  top: 32px;
+  width: 336px;
+}
+
+.div-wrapper .text-wrapper-25 {
+  color: #707071;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 51px;
+  white-space: nowrap;
+}
+
+.div-wrapper .group-15 {
+  background-color: #0099ff;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 0;
+  position: absolute;
+  top: 623px;
+  width: 336px;
+}
+
+.div-wrapper .text-wrapper-26 {
+  color: #ffffff;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 125px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+}
+
+/* add new card end */
+
+/* overview */
+
+.screen-3 {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.screen-3 .LOG-IN-4 {
+  background-color: #f2f2f2;
+  height: 926px;
+  overflow: hidden;
+  position: relative;
+  width: 428px;
+}
+
+.screen-3 .overlap-12 {
+  height: 752px;
+  left: -46px;
+  position: absolute;
+  top: 236px;
+  width: 519px;
+}
+
+.screen-3 .path-13 {
+  height: 471px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 282px;
+  width: 519px;
+}
+
+.screen-3 .union {
+  height: 270px;
+  left: 101px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 316px;
+}
+
+.screen-3 .ellipse-2 {
+  background-color: #fdbe36;
+  border-radius: 11px/11.5px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 23px;
+  left: 126px;
+  position: absolute;
+  top: 56px;
+  width: 22px;
+}
+
+.screen-3 .ellipse-3 {
+  background-color: #fdbe36;
+  border-radius: 11px/11.5px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 23px;
+  left: 126px;
+  position: absolute;
+  top: 119px;
+  width: 22px;
+}
+
+.screen-3 .ellipse-4 {
+  background-color: #fdbe36;
+  border-radius: 11px/11.5px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 23px;
+  left: 126px;
+  position: absolute;
+  top: 169px;
+  width: 22px;
+}
+
+.screen-3 .text-wrapper-27 {
+  color: #3180f0;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 12px;
+  font-weight: 700;
+  left: 133px;
+  letter-spacing: 0;
+  line-height: 12px;
+  position: absolute;
+  top: 22px;
+  white-space: nowrap;
+}
+
+.screen-3 .add-your-card-so-we {
+  color: #3180f0;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 12px;
+  font-weight: 700;
+  left: 155px;
+  letter-spacing: 0;
+  line-height: 12px;
+  position: absolute;
+  top: 59px;
+  white-space: nowrap;
+}
+
+.screen-3 .learn-through-mini {
+  color: #3180f0;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 12px;
+  font-weight: 700;
+  left: 155px;
+  letter-spacing: 0;
+  line-height: 12px;
+  position: absolute;
+  top: 112px;
+  white-space: nowrap;
+}
+
+.screen-3 .text-wrapper-28 {
+  color: #3180f0;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 12px;
+  font-weight: 700;
+  left: 155px;
+  letter-spacing: 0;
+  line-height: 12px;
+  position: absolute;
+  top: 174px;
+  white-space: nowrap;
+}
+
+.screen-3 .untitled-design-2 {
+  height: 406px;
+  left: 110px;
+  object-fit: cover;
+  position: absolute;
+  top: 195px;
+  width: 406px;
+}
+
+.screen-3 .group-16 {
+  background-color: #0099ff;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 92px;
+  position: absolute;
+  top: 539px;
+  width: 336px;
+}
+
+.screen-3 .text-wrapper-29 {
+  color: #ffffff;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 125px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+}
+
+.screen-3 .status-bar-4 {
+  height: 44px;
+  left: 19px;
+  position: absolute;
+  top: 0;
+  width: 390px;
+}
+
+.screen-3 .cellular-connection-3 {
+  height: 11px;
+  left: 303px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 17px;
+}
+
+.screen-3 .wifi-4 {
+  height: 11px;
+  left: 325px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 15px;
+}
+
+.screen-3 .time-4 {
+  color: #353535;
+  font-family: "SFProDisplay-Semibold", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  left: 23px;
+  letter-spacing: -0.28px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: 56px;
+}
+
+.screen-3 .battary-4 {
+  height: 12px;
+  left: 346px;
+  position: absolute;
+  top: 18px;
+  width: 24px;
+}
+
+.screen-3 .cap-4 {
+  height: 4px;
+  left: 23px;
+  object-fit: cover;
+  position: absolute;
+  top: 4px;
+  width: 1px;
+}
+
+.screen-3 .overlap-group-4 {
+  background-image: url(../../../static/img/rectangle-53-10.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 3px;
+  height: 12px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
+
+.screen-3 .rectangle-9 {
+  background-color: #353535;
+  border-radius: 1px;
+  height: 8px;
+  left: 2px;
+  position: relative;
+  top: 2px;
+  width: 14px;
+}
+
+.screen-3 .overlap-13 {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #bfbfbf;
+  border-radius: 14px;
+  height: 12px;
+  left: 70px;
+  position: absolute;
+  top: 78px;
+  width: 288px;
+}
+
+.screen-3 .rectangle-10 {
+  background-color: #fdb61c;
+  border: 1px solid;
+  border-color: #707070;
+  border-radius: 14px;
+  height: 12px;
+  left: -1px;
+  position: relative;
+  top: -1px;
+  width: 51px;
+}
+
+.screen-3 .text-wrapper-30 {
+  color: #3180f0;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  left: 162px;
+  letter-spacing: 0;
+  line-height: 10px;
+  position: absolute;
+  top: 48px;
+  white-space: nowrap;
+}
+
+.screen-3 .group-17 {
+  height: 23px;
+  left: 70px;
+  position: absolute;
+  top: 210px;
+  width: 219px;
+}
+
+.screen-3 .text-wrapper-31 {
+  color: #000000;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 9px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 9px;
+  position: absolute;
+  top: 7px;
+  white-space: nowrap;
+}
+
+.screen-3 .ellipse-5 {
+  background-color: #fdbe36;
+  border-radius: 11px/11.5px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 23px;
+  left: 97px;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
+
+.screen-3 .text-wrapper-32 {
+  color: #000000;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 9px;
+  font-weight: 700;
+  left: 129px;
+  letter-spacing: 0;
+  line-height: 9px;
+  position: absolute;
+  top: 7px;
+  white-space: nowrap;
+}
+
+/* overview end */
+
+/* welcome step - final step  */
+
+.LOG-IN {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.LOG-IN .div {
+  background-color: #f2f2f2;
+  height: 926px;
+  position: relative;
+  width: 428px;
+}
+
+.LOG-IN .status-bar {
+  height: 44px;
+  left: 19px;
+  position: absolute;
+  top: 0;
+  width: 390px;
+}
+
+.LOG-IN .cellular-connection {
+  height: 11px;
+  left: 303px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 17px;
+}
+
+.LOG-IN .wifi {
+  height: 11px;
+  left: 325px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 15px;
+}
+
+.LOG-IN .time {
+  color: #353535;
+  font-family: "SFProDisplay-Semibold", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  left: 23px;
+  letter-spacing: -0.28px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+  width: 56px;
+}
+
+.LOG-IN .battary {
+  height: 12px;
+  left: 346px;
+  position: absolute;
+  top: 18px;
+  width: 24px;
+}
+
+.LOG-IN .cap {
+  height: 4px;
+  left: 23px;
+  object-fit: cover;
+  position: absolute;
+  top: 4px;
+  width: 1px;
+}
+
+.LOG-IN .overlap-group {
+  background-image: url(../../../static/img/rectangle-53-10.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 3px;
+  height: 12px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
+
+.LOG-IN .rectangle {
+  background-color: #353535;
+  border-radius: 1px;
+  height: 8px;
+  left: 2px;
+  position: relative;
+  top: 2px;
+  width: 14px;
+}
+
+.LOG-IN .overlap {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #bfbfbf;
+  border-radius: 14px;
+  height: 12px;
+  left: 70px;
+  position: absolute;
+  top: 78px;
+  width: 288px;
+}
+
+.LOG-IN .rectangle-2 {
+  background-color: #fdb61c;
+  border-radius: 14px;
+  height: 12px;
+  left: -1px;
+  position: relative;
+  top: -1px;
+}
+
+.LOG-IN .text-wrapper {
+  color: #3180f0;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  left: 162px;
+  letter-spacing: 0;
+  line-height: 10px;
+  position: absolute;
+  top: 48px;
+  white-space: nowrap;
+}
+
+.LOG-IN .overlap-2 {
+  height: 466px;
+  left: 30px;
+  position: absolute;
+  top: 189px;
+  width: 383px;
+}
+
+.LOG-IN .hi-welcome-to {
+  color: #979798;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 17px;
+  font-weight: 700;
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 17px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+}
+
+.LOG-IN .group {
+  height: 383px;
+  left: 0;
+  position: absolute;
+  top: 83px;
+  width: 383px;
+}
+
+.LOG-IN .overlap-3 {
+  border-radius: 15px;
+  height: 383px;
+  position: relative;
+}
+
+.LOG-IN .ellipse {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #707070;
+  border-radius: 121px/114.5px;
+  height: 229px;
+  left: 60px;
+  position: absolute;
+  top: 113px;
+  width: 242px;
+}
+
+.LOG-IN .untitled-design {
+  border-radius: 15px;
+  height: 383px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 383px;
+}
+
+.LOG-IN .rectangle-3 {
+  background-color: #fdb61c;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 29px;
+  left: 92px;
+  position: absolute;
+  top: 314px;
+  width: 183px;
+}
+
+.LOG-IN .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 177px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 400px;
+  white-space: nowrap;
+}
+
+.LOG-IN .group-2 {
+  background-color: #0099ff;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px #0014ff29;
+  height: 60px;
+  left: 46px;
+  position: absolute;
+  top: 775px;
+  width: 336px;
+}
+
+.LOG-IN .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 140px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+}
+/* welcome step end */
+
+.onboarding {
+  transition: 0.2s ease-in-out;
+}
+
+.onboarding:hover {
+  scale: 1.1 !important;
+}
+
+.onboarding:active {
+  scale: 0.8 !important;
+}
+
+.overlap-10::placeholder {
+  color: #707071;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 49px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+}

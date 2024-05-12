@@ -25,7 +25,7 @@ export default function PageOneGraphic({ height, width }: PageGraphicProps) {
         >
           <feOffset dy="20" />
           <feGaussianBlur stdDeviation="5" result="blur" />
-          <feFlood flood-opacity="0.161" />
+          <feFlood floodOpacity="0.161" />
           <feComposite operator="in" in2="blur" />
           <feComposite in="SourceGraphic" />
         </filter>

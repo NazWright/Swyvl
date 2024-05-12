@@ -45,6 +45,7 @@ export default function Verification({ email }: VerificationProps) {
     } catch (error: any) {
       console.error(error.message);
       setFormErrorMessage(error.message);
+      setFormDisabled(false);
     }
   }
 
