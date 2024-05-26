@@ -5,4 +5,6 @@ export interface User {
   family_name: string;
   phone_number: string;
   given_name: string;
+  points?: number;
+  current_level?: number;
 }

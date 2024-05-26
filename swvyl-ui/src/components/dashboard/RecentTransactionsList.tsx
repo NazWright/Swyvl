@@ -71,7 +71,9 @@ export default function RecentTransactionsList({
       </>
 
       <div className="scroll-group-2">
-        {expenses.length <= 0 && <div> No recent transactions. </div>}
+        {displayedTransactions.filter(
+          (transaction: PlaidTransaction) => transaction.merchant_name
+        ).length <= 0 && <div> No recent transactions. </div>}
 
         {displayedTransactions.length > 0 &&
           displayedTransactions
