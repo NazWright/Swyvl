@@ -12,6 +12,7 @@ import OnboardingStepsOrchestrator from "./components/onboarding/steps/Onboardin
 import Chat from "./components/chat/Chat";
 import SpendingActivityFull from "./components/spending-activity/SpendingActivityFull";
 import Insights from "./components/insights/Insights";
+import GameUI from "./components/game/Game";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
   {
     path: "/insights",
     element: <Insights />,
+  },
+  {
+    path: "/game",
+    element: <GameUI />,
   },
 ]);
 
