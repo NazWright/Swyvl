@@ -35,6 +35,6 @@ export class Game implements Gameable {
   }
 
   isComplete() {
-    return this.current_level === this.levels.length - 1;
+    return this.current_level === this.levels.length;
   }
 }

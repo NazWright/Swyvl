@@ -7,7 +7,8 @@ export interface Levelable {
   numberCorrectToPass: number;
   correctCount: number;
   // loadQuestions: () => void;
-  checkCompletion: () => boolean;
+  checkCompletion: (questionIndex: number) => boolean;
+  isLevelPassed: () => boolean;
 }
 
 export class Level implements Levelable {
@@ -31,7 +32,18 @@ export class Level implements Levelable {
     this.numberCorrectToPass = numberCorrectToPass;
   }
 
-  checkCompletion = () => {
+  checkCompletion = (questionIndex: number) => {
+    if (!this.questions) return false;
+
+    if (questionIndex === this.questions.length - 1) {
+      this.isCompleted = true;
+      return true;
+    }
+
+    return false;
+  };
+
+  isLevelPassed = () => {
     return this.correctCount >= this.numberCorrectToPass;
   };
 }
