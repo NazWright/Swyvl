@@ -15,7 +15,7 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: build
+    baseDirectory: swvyl-ui/build
     files:
       - "**/*"
   cache:
