@@ -4,14 +4,17 @@ import { Question, QuestionImpl } from "../../model/Question";
 import { Game } from "../../model/Game";
 import { fetchUserAttributes } from "aws-amplify/auth";
 import { User } from "../../model/User";
-import { Level } from "../../model/Level";
+import { Level, LevelStatus } from "../../model/Level";
 import { CircularProgress } from "@mui/material";
 import { infoLogFormatter } from "../../utils/logFormatter";
 import { FieldValues, useForm } from "react-hook-form";
+import { LevelOverview } from "./LevelOverview";
 
 export default function GameUI() {
   const [game, setGameDetails] = useState(new Game(undefined, 1, []));
-  const [levels, setLevels] = useState([new Level(0, undefined, false, 0, 0)]);
+  const [levels, setLevels] = useState([
+    new Level(0, LevelStatus.NOT_STARTED, undefined, false, 0, 0),
+  ]);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [disabled, setDisabled] = useState(false);
@@ -38,8 +41,31 @@ export default function GameUI() {
   const currentLevel = levels[game.current_level - 1];
   const { questions } = currentLevel;
 
+  function renderLevel(currentLevel: Level) {
+    setIsLoading(true);
+    currentLevel.setLevelStatus(LevelStatus.IN_PROGRESS);
+    const level = new Level(
+      currentLevel.levelNumber,
+      LevelStatus.IN_PROGRESS,
+      currentLevel.questions,
+      currentLevel.isCompleted,
+      currentLevel.numberCorrectToPass,
+      currentLevel.correctCount
+    );
+  }
+
   function renderGameQuestions() {
-    return questions && !isLoading ? <GameContent /> : <CircularProgress />;
+    if (!isLoading && questions) {
+      switch (currentLevel.status) {
+        case LevelStatus.IN_PROGRESS:
+          return <GameContent />;
+        case LevelStatus.OVERVIEW || LevelStatus.NOT_STARTED:
+          return <LevelOverview />;
+        default:
+          return <div>done</div>;
+      }
+    }
+    return <CircularProgress />;
   }
 
   function handleAnswer(isCorrect: boolean) {
@@ -65,11 +91,12 @@ export default function GameUI() {
     const isLevelPassed = currentLevel.isLevelPassed();
 
     if (isLevelPassed) {
+      currentLevel.completeLevel();
       infoLogFormatter(
         "User has successfully passed level " + currentLevel.levelNumber
       );
 
-      if (!game.isComplete()) {
+      if (!game.isComplete() && currentLevel.isCompleted) {
         console.info("Moving on to the next level...");
         setGameDetails(
           new Game(game.user, game.current_level + 1, game.levels)
@@ -80,6 +107,7 @@ export default function GameUI() {
       }
     } else {
       infoLogFormatter("User has failed level");
+      currentLevel.failLevel();
       setDisabled(true);
       // TODO: can show a modal to allow the user to quit or restart the level.
     }
@@ -161,6 +189,6 @@ const question2 = new QuestionImpl(
 const questionsList = [question, question2];
 
 const baselevels = [
-  new Level(1, questionsList, false, 1, 0),
-  new Level(2, questionsList, false, 1, 0),
+  new Level(1, LevelStatus.OVERVIEW, questionsList, false, 1, 0),
+  new Level(2, LevelStatus.OVERVIEW, questionsList, false, 1, 0),
 ];

@@ -13,6 +13,9 @@ import Chat from "./components/chat/Chat";
 import SpendingActivityFull from "./components/spending-activity/SpendingActivityFull";
 import Insights from "./components/insights/Insights";
 import GameUI from "./components/game/Game";
+import { LevelOverview } from "./components/game/LevelOverview";
+import "./index.css";
+import { QuestionScreen } from "./components/game/QuestionScreen";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -54,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: "/game",
     element: <GameUI />,
+  },
+  {
+    path: "/question",
+    element: <QuestionScreen />,
   },
 ]);
 

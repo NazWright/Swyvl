@@ -1,7 +1,16 @@
 import { Question } from "./Question";
 
+export enum LevelStatus {
+  NOT_STARTED,
+  OVERVIEW,
+  IN_PROGRESS,
+  COMPLETED,
+  FAILED,
+}
+
 export interface Levelable {
   levelNumber: number;
+  status: LevelStatus;
   questions?: Question[];
   isCompleted: boolean;
   numberCorrectToPass: number;
@@ -17,9 +26,11 @@ export class Level implements Levelable {
   isCompleted: boolean;
   numberCorrectToPass: number;
   correctCount: number;
+  status: LevelStatus;
 
   constructor(
     levelNumber: number,
+    status: LevelStatus,
     questions: Question[] | undefined,
     isCompleted: boolean,
     numberCorrectToPass: number,
@@ -30,6 +41,7 @@ export class Level implements Levelable {
     this.questions = questions;
     this.correctCount = correctCount || 0;
     this.numberCorrectToPass = numberCorrectToPass;
+    this.status = status || LevelStatus.NOT_STARTED;
   }
 
   checkCompletion = (questionIndex: number) => {
@@ -45,5 +57,19 @@ export class Level implements Levelable {
 
   isLevelPassed = () => {
     return this.correctCount >= this.numberCorrectToPass;
+  };
+
+  setLevelStatus = (status: LevelStatus) => {
+    this.status = status;
+  };
+
+  completeLevel = () => {
+    this.setLevelStatus(LevelStatus.COMPLETED);
+    this.isCompleted = true;
+  };
+
+  failLevel = () => {
+    this.setLevelStatus(LevelStatus.FAILED);
+    this.isCompleted = false;
   };
 }
