@@ -1,66 +1,64 @@
 import React, { useEffect, useState } from "react";
 import "./Game.css";
-import { Question, QuestionImpl } from "../../model/Question";
 import { Game } from "../../model/Game";
 import { fetchUserAttributes } from "aws-amplify/auth";
 import { User } from "../../model/User";
 import { Level, LevelStatus } from "../../model/Level";
 import { CircularProgress } from "@mui/material";
 import { infoLogFormatter } from "../../utils/logFormatter";
-import { FieldValues, useForm } from "react-hook-form";
-import { LevelOverview } from "./LevelOverview";
+import { QuestionScreen } from "./QuestionScreen";
+import { createGame } from "../../utils/createGameObject";
+import { useNavigate } from "react-router-dom";
 
 export default function GameUI() {
   const [game, setGameDetails] = useState(new Game(undefined, 1, []));
+  const navigate = useNavigate();
+
   const [levels, setLevels] = useState([
-    new Level(0, LevelStatus.NOT_STARTED, undefined, false, 0, 0),
+    new Level(
+      0,
+      "SMART Goals",
+      LevelStatus.NOT_STARTED,
+      undefined,
+      false,
+      0,
+      0
+    ),
   ]);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [disabled, setDisabled] = useState(false);
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
-
   useEffect(() => {
     async function initializeGame() {
       const userAttributes = (await fetchUserAttributes()) as User;
-      // TODO: replace hardcoded number with the current level on the user object
-      const gameDetails = new Game(userAttributes, game.current_level, levels);
-      setGameDetails(gameDetails);
-      setLevels(baselevels);
-    }
+      const game = createGame(userAttributes);
 
+      setGameDetails(game);
+      setLevels(game.levels);
+    }
     initializeGame();
-  }, [game.current_level, levels]);
+  }, []);
 
   const currentLevel = levels[game.current_level - 1];
   const { questions } = currentLevel;
 
-  function renderLevel(currentLevel: Level) {
-    setIsLoading(true);
-    currentLevel.setLevelStatus(LevelStatus.IN_PROGRESS);
-    const level = new Level(
-      currentLevel.levelNumber,
-      LevelStatus.IN_PROGRESS,
-      currentLevel.questions,
-      currentLevel.isCompleted,
-      currentLevel.numberCorrectToPass,
-      currentLevel.correctCount
-    );
-  }
-
   function renderGameQuestions() {
     if (!isLoading && questions) {
+      console.log(currentLevel.status);
       switch (currentLevel.status) {
-        case LevelStatus.IN_PROGRESS:
-          return <GameContent />;
         case LevelStatus.OVERVIEW || LevelStatus.NOT_STARTED:
-          return <LevelOverview />;
+          return (
+            <QuestionScreen
+              questionIndex={questionIndex}
+              time={1200}
+              level={currentLevel}
+              question={questions[questionIndex]}
+              nextQuestionHandler={(questionIsCorrect) =>
+                handleAnswer(questionIsCorrect)
+              }
+            />
+          );
         default:
           return <div>done</div>;
       }
@@ -76,7 +74,6 @@ export default function GameUI() {
   }
 
   function processQuestionCompletion() {
-    // update the UI to show that the answer was correct of not
     const newQuestionIndex = questionIndex;
     const isComplete = currentLevel.checkCompletion(newQuestionIndex);
 
@@ -107,8 +104,10 @@ export default function GameUI() {
       }
     } else {
       infoLogFormatter("User has failed level");
-      currentLevel.failLevel();
       setDisabled(true);
+      alert("You have failed the level, please try again...");
+      currentLevel.failLevel();
+      navigate("/insights");
       // TODO: can show a modal to allow the user to quit or restart the level.
     }
   }
@@ -118,77 +117,5 @@ export default function GameUI() {
     // TODO: update user points total
   }
 
-  function selectAnswer(
-    fieldValues: FieldValues | undefined,
-    question: Question
-  ) {
-    if (!fieldValues?.smartGoalsFormInput) return;
-    setIsLoading(true);
-    setDisabled(true);
-
-    const selectedAnswer = fieldValues.smartGoalsFormInput as string;
-    const isCorrect = question.checkAnswer(selectedAnswer);
-
-    handleAnswer(isCorrect);
-    reset();
-    setIsLoading(false);
-    setDisabled(false);
-  }
-
-  const GameContent = () => {
-    return (
-      <div
-        className="container w-100 h-100 d-flex flex-column
-  align-items-center"
-      >
-        <div>Level: {game.current_level}</div>
-
-        <div>{questions && questions[questionIndex].text}</div>
-
-        <form onSubmit={handleSubmit((event) => selectAnswer(event, question))}>
-          {questions &&
-            questions[questionIndex].choices.map((choice, index: number) => {
-              return (
-                <div key={index}>
-                  <input
-                    disabled={disabled}
-                    type="radio"
-                    key={index}
-                    value={choice}
-                    {...register("smartGoalsFormInput")}
-                  />
-                  <label htmlFor={choice}>{choice}</label>
-                </div>
-              );
-            })}
-          <button disabled={disabled}>Next</button>
-        </form>
-
-        {!questions && <CircularProgress />}
-      </div>
-    );
-  };
-
   return renderGameQuestions();
 }
-
-const question = new QuestionImpl(
-  "1",
-  "What Does the S in smart goals stand for?",
-  "Smart",
-  ["Smart", "Measurable", "Attainable", "Goals"]
-);
-
-const question2 = new QuestionImpl(
-  "2",
-  "What Does the M in smart goals stand for?",
-  "Smart",
-  ["Smart", "Johnny", "Attainable", "Goals"]
-);
-
-const questionsList = [question, question2];
-
-const baselevels = [
-  new Level(1, LevelStatus.OVERVIEW, questionsList, false, 1, 0),
-  new Level(2, LevelStatus.OVERVIEW, questionsList, false, 1, 0),
-];

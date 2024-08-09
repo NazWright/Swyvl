@@ -18,9 +18,11 @@ export interface Levelable {
   // loadQuestions: () => void;
   checkCompletion: (questionIndex: number) => boolean;
   isLevelPassed: () => boolean;
+  levelName: string;
 }
 
 export class Level implements Levelable {
+  levelName: string;
   levelNumber: number;
   questions?: Question[];
   isCompleted: boolean;
@@ -30,6 +32,7 @@ export class Level implements Levelable {
 
   constructor(
     levelNumber: number,
+    levelName: string,
     status: LevelStatus,
     questions: Question[] | undefined,
     isCompleted: boolean,
@@ -42,6 +45,7 @@ export class Level implements Levelable {
     this.correctCount = correctCount || 0;
     this.numberCorrectToPass = numberCorrectToPass;
     this.status = status || LevelStatus.NOT_STARTED;
+    this.levelName = levelName;
   }
 
   checkCompletion = (questionIndex: number) => {

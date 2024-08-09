@@ -3,10 +3,7 @@ import "./style.css";
 import { useNavigate } from "react-router-dom";
 import { infoLogFormatter } from "../../../utils/logFormatter";
 
-interface LevelOverviewProps {
-  content: string[];
-  startLevelHandler: () => void;
-}
+interface LevelOverviewProps {}
 
 export const LevelOverview = (): JSX.Element => {
   const [contentIndex, setContentIndex] = useState(0);

@@ -94,6 +94,19 @@
   white-space: nowrap;
 }
 
+.game .level-icon {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.game .level-icon:hover {
+  scale: 1.1;
+}
+
+.game .level-icon:focus {
+  scale: 0.9;
+}
+
 .game .rectangle-11 {
   background: linear-gradient(90deg, #ed6ea0 0%, #ec8c69 100%);
   border-radius: 24px;

@@ -1,0 +1,180 @@
+{
+  "levelName": "Smart Goals",
+  "questions": [
+    {
+      "question": "1. What does the S in SMART goals stand for?",
+      "correctAnswer": "Specific",
+      "incorrectAnswer1": "Simple",
+      "incorrectAnswer2": "Super",
+      "incorrectAnswer3": "Short"
+    },
+    {
+      "question": "2. What does the M in SMART goals stand for?",
+      "correctAnswer": "Measurable",
+      "incorrectAnswer1": "Manageable",
+      "incorrectAnswer2": "Meaningful",
+      "incorrectAnswer3": "Massive"
+    },
+    {
+      "question": "3. What does the A in SMART goals stand for?",
+      "correctAnswer": "Achievable",
+      "incorrectAnswer1": "Affordable",
+      "incorrectAnswer2": "Ambitious",
+      "incorrectAnswer3": "Abstract"
+    },
+    {
+      "question": "4. What does the R in SMART goals stand for?",
+      "correctAnswer": "Relevant",
+      "incorrectAnswer1": "Random",
+      "incorrectAnswer2": "Realistic",
+      "incorrectAnswer3": "Reliable"
+    },
+    {
+      "question": "5. What does the T in SMART goals stand for?",
+      "correctAnswer": "Time-bound",
+      "incorrectAnswer1": "Tricky",
+      "incorrectAnswer2": "Timeless",
+      "incorrectAnswer3": "Temporary"
+    },
+    {
+      "question": "6. Why are SMART goals important?",
+      "correctAnswer": "Provide clarity",
+      "incorrectAnswer1": "Create confusion",
+      "incorrectAnswer2": "Are vague",
+      "incorrectAnswer3": "Are easy to ignore"
+    },
+    {
+      "question": "7. What is an example of a specific goal?",
+      "correctAnswer": "Save $500",
+      "incorrectAnswer1": "Save some money",
+      "incorrectAnswer2": "Get richer",
+      "incorrectAnswer3": "Spend less"
+    },
+    {
+      "question": "8. What makes a goal measurable?",
+      "correctAnswer": "Quantifiable outcome",
+      "incorrectAnswer1": "Vague outcome",
+      "incorrectAnswer2": "Subjective outcome",
+      "incorrectAnswer3": "Random outcome"
+    },
+    {
+      "question": "9. How can you ensure a goal is achievable?",
+      "correctAnswer": "Set realistic steps",
+      "incorrectAnswer1": "Aim impossibly high",
+      "incorrectAnswer2": "Ignore challenges",
+      "incorrectAnswer3": "Avoid planning"
+    },
+    {
+      "question": "10. Why should a goal be relevant?",
+      "correctAnswer": "Aligns with values",
+      "incorrectAnswer1": "Seems popular",
+      "incorrectAnswer2": "Is easy",
+      "incorrectAnswer3": "Is vague"
+    },
+    {
+      "question": "11. How does setting a time limit help with goals?",
+      "correctAnswer": "Creates urgency",
+      "incorrectAnswer1": "Reduces importance",
+      "incorrectAnswer2": "Adds stress",
+      "incorrectAnswer3": "Is unnecessary"
+    },
+    {
+      "question": "12. What should you do if you achieve a SMART goal?",
+      "correctAnswer": "Set a new goal",
+      "incorrectAnswer1": "Stop setting goals",
+      "incorrectAnswer2": "Ignore it",
+      "incorrectAnswer3": "Repeat it"
+    },
+    {
+      "question": "13. How can you track progress towards a goal?",
+      "correctAnswer": "Regular reviews",
+      "incorrectAnswer1": "Ignore progress",
+      "incorrectAnswer2": "Random checks",
+      "incorrectAnswer3": "Avoid tracking"
+    },
+    {
+      "question": "14. What is an example of a time-bound goal?",
+      "correctAnswer": "Save $100 in 2 months",
+      "incorrectAnswer1": "Save $100",
+      "incorrectAnswer2": "Save some money",
+      "incorrectAnswer3": "Save $100 eventually"
+    },
+    {
+      "question": "15. What should you do if a goal is not achievable?",
+      "correctAnswer": "Adjust the goal",
+      "incorrectAnswer1": "Abandon it",
+      "incorrectAnswer2": "Ignore it",
+      "incorrectAnswer3": "Make it harder"
+    },
+    {
+      "question": "16. Why is specificity important in goal setting?",
+      "correctAnswer": "Provides direction",
+      "incorrectAnswer1": "Adds confusion",
+      "incorrectAnswer2": "Is less motivating",
+      "incorrectAnswer3": "Is unimportant"
+    },
+    {
+      "question": "17. What is a benefit of measurable goals?",
+      "correctAnswer": "Trackable progress",
+      "incorrectAnswer1": "Vague outcome",
+      "incorrectAnswer2": "More stress",
+      "incorrectAnswer3": "Less importance"
+    },
+    {
+      "question": "18. How can you make a goal relevant?",
+      "correctAnswer": "Align with priorities",
+      "incorrectAnswer1": "Make it random",
+      "incorrectAnswer2": "Follow trends",
+      "incorrectAnswer3": "Ignore it"
+    },
+    {
+      "question": "19. What is an example of an irrelevant goal?",
+      "correctAnswer": "Random objective",
+      "incorrectAnswer1": "Aligned with values",
+      "incorrectAnswer2": "Well-planned",
+      "incorrectAnswer3": "Time-bound"
+    },
+    {
+      "question": "20. Why is it important to have a deadline?",
+      "correctAnswer": "Adds urgency",
+      "incorrectAnswer1": "Reduces focus",
+      "incorrectAnswer2": "Creates confusion",
+      "incorrectAnswer3": "Adds flexibility"
+    },
+    {
+      "question": "21. How can you ensure a goal is specific?",
+      "correctAnswer": "Clear description",
+      "incorrectAnswer1": "Vague terms",
+      "incorrectAnswer2": "Abstract ideas",
+      "incorrectAnswer3": "Random words"
+    },
+    {
+      "question": "22. What is an example of a measurable goal?",
+      "correctAnswer": "Trackable savings",
+      "incorrectAnswer1": "Vague savings",
+      "incorrectAnswer2": "Random outcome",
+      "incorrectAnswer3": "Undefined success"
+    },
+    {
+      "question": "23. How can goals impact motivation?",
+      "correctAnswer": "Increase motivation",
+      "incorrectAnswer1": "Reduce motivation",
+      "incorrectAnswer2": "Create confusion",
+      "incorrectAnswer3": "Are irrelevant"
+    },
+    {
+      "question": "24. What should you do if a goal is not relevant?",
+      "correctAnswer": "Reassess and adjust",
+      "incorrectAnswer1": "Ignore it",
+      "incorrectAnswer2": "Make it random",
+      "incorrectAnswer3": "Abandon it"
+    },
+    {
+      "question": "25. What is an example of an achievable goal?",
+      "correctAnswer": "Realistic savings plan",
+      "incorrectAnswer1": "Unrealistic amount",
+      "incorrectAnswer2": "Random number",
+      "incorrectAnswer3": "Impossible goal"
+    }
+  ]
+}

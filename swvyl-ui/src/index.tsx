@@ -59,8 +59,8 @@ const router = createBrowserRouter([
     element: <GameUI />,
   },
   {
-    path: "/question",
-    element: <QuestionScreen />,
+    path: "/overview",
+    element: <LevelOverview />,
   },
 ]);
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 import { constants } from "../../constants/applicationConstants";
 import "./Insights.css";
@@ -14,6 +14,7 @@ import img4 from "../../static/img/4-1x.png";
 
 export default function Insights() {
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
@@ -29,7 +30,12 @@ export default function Insights() {
               <div className="overlap-6">
                 <div className="text-wrapper-4">LET’S PLAY</div>
                 <div className="rectangle-11" />
-                <div className="rectangle-12" />
+                <div
+                  className="rectangle-12 level-icon"
+                  onClick={() => {
+                    navigate("/overview");
+                  }}
+                />
                 <div className="rectangle-13" />
                 <div className="icon-done">
                   <div className="vector-wrapper">

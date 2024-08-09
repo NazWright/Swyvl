@@ -254,6 +254,11 @@
   color: white;
 }
 
+.game-screen .selected {
+  border: 4px solid blue;
+  scale: 0.95;
+}
+
 .game-screen .text-wrapper-9 {
   color: #050089;
   font-family: "HelveticaNeue-Regular", Helvetica;
